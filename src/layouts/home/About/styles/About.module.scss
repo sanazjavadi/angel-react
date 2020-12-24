@@ -1,0 +1,28 @@
+@import '../../../../design/index.scss';
+
+.section-margin {
+    margin-top: 330px;
+    @media (max-width: 768px) {
+      margin-top: 250px;
+    }
+    .description {
+      h2 {
+        color: $dark-blue;
+        @extend %font-heading;
+      }
+      p {
+        color: $gray;
+        text-align: right;
+        text-align: justify;
+        @extend %font-content;
+      }
+    }
+    .img-desc {
+      border-radius: 5px;
+      width: 100%;
+      margin: auto;
+      img {
+        height: 500px;
+      }
+    }
+  }

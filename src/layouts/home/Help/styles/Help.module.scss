@@ -1,0 +1,12 @@
+@import '../../../../design/index.scss';
+
+.margin-section {
+    @media (min-width: 991px) {
+      padding: 50px;
+    }
+    padding: 60px;
+  }
+  .support-title {
+    @extend %font-heading;
+    color: $dark-blue;
+  }
