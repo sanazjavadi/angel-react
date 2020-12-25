@@ -1,7 +1,11 @@
 import React from 'react'
 
+//components
+import ProductCart from '../../../components/Product'
+
 //styles
 import Styles from './styles/DreamSection.module.scss'
+
 
 function DreamSection(props) {
     return (
@@ -19,17 +23,17 @@ function DreamSection(props) {
             <div
               className="col-lg-4 col-md-6 col-sm-7 col-xs-9 col-11 d-flex justify-content-lg-end justify-content-center"
             >
-              {/* <sellignCart /> */}
+             <ProductCart/>
             </div>
             <div
               className="col-lg-4 col-md-6 col-sm-7 col-xs-9 col-11 d-flex justify-content-lg-center justify-content-center"
             >
-              {/* <sellignCart /> */}
+               <ProductCart/>
             </div>
             <div
               className="col-lg-4 col-md-6 col-sm-7 col-xs-9 col-11 d-flex justify-content-lg-start justify-content-center"
             >
-              {/* <sellignCart /> */}
+               <ProductCart/>
             </div>
           </div>
         </div>
