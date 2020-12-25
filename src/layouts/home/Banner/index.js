@@ -2,11 +2,13 @@ import React, { useEffect, useState } from "react";
 
 //components
 import BaseButton from "../../../components/Button";
+import Auth from "../../Auth";
 
 //styles
 import Styles from "./styles/Banner.module.scss";
 
 function Banner(props) {
+  const [status, setStatus] = useState(false)
   const [ThirdCluodPosition, setThirdCluodPosition] = useState(2086.75);
   const [SecondCloudPosition, setSecondCloudPosition] = useState(-4173.5);
   useEffect(() => {
@@ -48,8 +50,7 @@ function Banner(props) {
 
             <div className="mt-3 ml-lg-3 ml-md-3 ml-sm-3 mr-1">
               <BaseButton
-
-              // @click="_toggleModal"
+             handleClick={() => setStatus(true)}
               >
                 ورود
               </BaseButton>
@@ -58,7 +59,7 @@ function Banner(props) {
         </div>
       </div>
 
-      {/* <auth-form v-if="showModal"> </auth-form> */}
+    <Auth status={status} changeStatus={() => setStatus(false)}/>
     </section>
   );
 }

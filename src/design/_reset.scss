@@ -50,6 +50,9 @@ button {
   border: none;
   display: inline-block;
   vertical-align: middle;
+  &:focus{
+    outline: none;
+  }
 }
 
 

@@ -15,5 +15,9 @@
   }
   .app{
     overflow-x: hidden !important;
-    font-family: 'Samim', sans-serif;
+    font-family: 'Samim';
   }
+
+  .modal-content{
+    border:none !important;
+}
