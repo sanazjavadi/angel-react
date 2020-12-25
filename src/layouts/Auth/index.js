@@ -33,7 +33,11 @@ function Index({ status, changeStatus }) {
       dialogClassName={Styles["_modal"]}
       bsPrefix={Styles["_modal"]}
     >
-      <div className={`${Styles["close-button"]} mt-2 mr-2`} onClick={changeStatus}></div>
+      <div className={`${Styles["close-button"]} mt-2 mr-2`} onClick={changeStatus}>
+          <span>
+          x
+          </span>
+          </div>
 
    <Comp  changeHandler={changePage}/>
     </Modal>

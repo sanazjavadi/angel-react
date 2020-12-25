@@ -1,48 +1,61 @@
-@import '../../../design/index.scss';
+@import "../../../design/index.scss";
 
 .section-margin {
-    margin-top: 250px;
-    .contact-form {
-      h2 {
-        @extend %font-heading;
-        color: $dark-blue;
-      }
-      .contact-base-form {
-        width: 80%;
-      }
-    }
-    .address {
-      h2 {
-        @extend %font-heading;
-        color: $dark-blue;
-        text-align: right;
-        padding-bottom: 0;
-        margin: 0;
-      }
-      p {
-        @extend %font-content;
-        color: $dark-gray;
-        text-align: right;
-        font-size: 14px;
-      }
-    }
-  }
-  .form-control {
-    padding: $size-input-padding;
-    font-size: $input-font-size;
-    line-height: $input-line-height;
-    color: $input-font-color;
+  margin-top: 250px;
+
+  .form-card {
+    padding: 25px;
     background-color: #fff;
-    border: $size-input-border solid $input-border-color;
-    font-weight: $input-font-weight;
-    will-change: border-color, box-shadow;
-    border-radius: $size-input-border-radius;
-    box-shadow: none;
-    transition: box-shadow 0.25s cubic-bezier(0.27, 0.01, 0.38, 1.06),
-      border 0.25s cubic-bezier(0.27, 0.01, 0.38, 1.06);
-    &:focus {
-      outline: none;
-      appearance: none;
-      border: $size-input-border solid darken($input-border-color, 20px);
+    border-radius: 12px;
+    box-shadow: 0 10px 24px 0 rgba(20, 47, 82, 0.12), 0 6px 14px 0 rgba(51, 118, 204, 0.06);
+    border: solid 0.5px rgba(184, 202, 224, 0.5);
+    h3 {
+      font-size: 20px;
+      color: $dark-blue;
+      line-height: 0.5rem;
+      font-weight: 700;
     }
   }
+  .contact-form {
+    h2 {
+      @extend %font-heading;
+      color: $dark-blue;
+    }
+    .contact-base-form {
+      width: 80%;
+    }
+  }
+  .address {
+    h2 {
+      @extend %font-heading;
+      color: $dark-blue;
+      text-align: right;
+      padding-bottom: 0;
+      margin: 0;
+    }
+    p {
+      @extend %font-content;
+      color: $dark-gray;
+      text-align: right;
+      font-size: 14px;
+    }
+  }
+}
+.form-control {
+  padding: $size-input-padding;
+  font-size: $input-font-size;
+  line-height: $input-line-height;
+  color: $input-font-color;
+  background-color: #fff;
+  border: $size-input-border solid $input-border-color;
+  font-weight: $input-font-weight;
+  will-change: border-color, box-shadow;
+  border-radius: $size-input-border-radius;
+  box-shadow: none;
+  transition: box-shadow 0.25s cubic-bezier(0.27, 0.01, 0.38, 1.06), border 0.25s cubic-bezier(0.27, 0.01, 0.38, 1.06);
+  &:focus {
+    outline: none;
+    appearance: none;
+    border: $size-input-border solid darken($input-border-color, 20px);
+  }
+}

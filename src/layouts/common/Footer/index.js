@@ -11,6 +11,7 @@ import Styles from "./styles/Footer.module.scss";
 import Twiiter from '../../../svg/Twitter';
 import Instagram from "../../../svg/Instagram";
 import Youtube from "../../../svg/Youtube";
+import Logo from '../../../svg/Logo'
 
 function Footer(props) {
   return (
@@ -31,7 +32,7 @@ function Footer(props) {
                       به دلیل مشکلات اقتصادی از تحصیل بازنمانند
                     </div>
                     <div className={Styles.logo}>
-                      {/* <BaseLogo :height="50" :width="50" /> */}
+                      <Logo height="50" width="50" />
                     </div>
                   </div>
                 </div>
@@ -70,23 +71,23 @@ function Footer(props) {
       {/* Footer Bottom */}
       <div className={Styles['footer-bottom']}>
         <div className="container-fluid">
-          <div className={`${Styles['copyright']}  ml-lg-3`}>
+          <div className={`${Styles['copyright']}  mr-lg-5`}>
             تمام حقوق برای بنیاد نیکوکاری فرشته محفوظ است
           </div>
           <ul className={Styles['social-icon-two']}>
             <li>
               <Link to="#">
-               <Twiiter/>
+               <Twiiter width="30" height="30"/>
               </Link>
             </li>
             <li>
               <Link to="/">
-                <Youtube/>
+                <Youtube width="30" height="30"/>
               </Link>
             </li>
             <li>
               <Link to="/">
-              <Instagram />
+              <Instagram width="30" height="30"/>
               </Link>
             </li>
           </ul>

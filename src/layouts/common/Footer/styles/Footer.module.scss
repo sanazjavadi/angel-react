@@ -50,7 +50,8 @@
     position: relative;
     margin-bottom: 40px;
   }
-  .main-footer .footer-widget .widget-title {
+  .main-footer  .widget-title {
+    text-align: right;
     position: relative;
     font-size: 24px;
     font-weight: 400;
@@ -61,6 +62,7 @@
     position: relative;
     font-size: 16px;
     font-weight: 400;
+    text-align: right;
     color: #ffffff;
     margin-bottom: 35px;
     li {
@@ -72,6 +74,7 @@
   }
   .logo-widget {
     position: relative;
+    text-align: right;
   }
   .logo-widget .logo {
     width: 20%;
