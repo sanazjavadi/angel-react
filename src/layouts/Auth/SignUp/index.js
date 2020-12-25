@@ -5,7 +5,7 @@ import Button from "../../../components/Button";
 //styles
 import Styles from "./styles/SignUp.module.scss";
 
-function Index(props) {
+function Index({changeHandler}) {
   return (
     <section className="mt-5 ">
       <div className="container">
@@ -14,22 +14,22 @@ function Index(props) {
             <div className={Styles["form-card"]}>
               <h3 className="text-right">عضویت</h3>
 
-              <div className="mb-2">
+              <div className="mb-3">
                 <Input placeholder="نام" />
               </div>
-              <div className="mb-2">
+              <div className="mb-3">
                 <Input placeholder="نام خانوادگی" />
               </div>
-              <div className="mb-2">
+              <div className="mb-3">
                 <Input placeholder=" شماره موبایل" />
               </div>
 
-              <div className="mb-2">
-                <Input placeholder="آدرس ایمیل" />
+              <div className="mb-3">
+                <Input placeholder="آدرس ایمیل" type="email"/>
               </div>
 
-              <div className="mb-2">
-                <Input placeholder="کلمه عبور" />
+              <div className="mb-3">
+                <Input placeholder="کلمه عبور" type="password"/>
               </div>
 
               <Button className="mb-3" size="block">
@@ -38,7 +38,7 @@ function Index(props) {
 
               <div className={`${Styles["footer-form"]} text-center mt-2`}>
                 قبلا عضو شدی؟
-                <span className="font-weight-bolder">ورود</span>
+                <span className="font-weight-bolder mr-1" onClick={() => changeHandler('signInComponent') }>ورود</span>
               </div>
             </div>
           </div>
