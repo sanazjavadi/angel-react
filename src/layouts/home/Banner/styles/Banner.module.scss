@@ -46,7 +46,7 @@
       color: $header-color;
     }
     .banner-title {
-      @media (max-width: 680px) {
+      @media (max-width: 500px) {
         margin-top: 9rem;
       }
       span {
@@ -58,3 +58,4 @@
       }
     }
   }
+

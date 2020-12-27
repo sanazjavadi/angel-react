@@ -6,14 +6,22 @@
     width: 80%;
     font-weight: 900;
     cursor: pointer;
-    ul{
+    
         li{
             a{
                 color: #696478;
-            }
+            
         }
+        .isActive{
+          color:$dark-blue;
+          
+        }
+@media (max-width:620px){
+font-size: 0.9rem;
+}
     }
-  }
+  
+}
   .scrolled {
     display: flex;
     justify-content: center;

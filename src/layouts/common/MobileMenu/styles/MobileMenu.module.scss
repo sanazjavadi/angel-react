@@ -23,10 +23,12 @@
   .hamburger-menu {
     position: fixed;
     width: 100%;
-    height: 80vh;
+    height: 100%;
     background: $light-blue;
-    z-index: 14;
-  
+    z-index: 999;
+  .close-btn{
+    
+  }
     ul {
       padding-top: 6rem;
       display: flex;
@@ -40,7 +42,14 @@
         width: 100%;
         font-weight: 900;
         font-size: 1rem;
-        color: $dark-blue;
+      
+        a{
+          color: $dark-blue;
+        }
+        .isActive{
+           opacity: 0.8;
+       
+        }
        
       }
     }

@@ -1,5 +1,6 @@
 export { default as Logo } from './Logo'
 export { default as Call } from './Call'
+export { default as Close } from './Close'
 export { default as Email } from './Email'
 export { default as Gift } from './Gift'
 export { default as Home } from './Home'

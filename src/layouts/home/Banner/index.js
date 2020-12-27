@@ -35,7 +35,7 @@ function Banner(props) {
         className={Styles.clouds}
         style={{ backgroundPositionX: SecondCloudPosition + "px" }}
       ></div>
-      <div className="row justify-content-center banner-title">
+      <div className={`row justify-content-center ${Styles['banner-title']}`}>
         <div className="col-lg-6 col-11 d-flex flex-column justify-content-center align-items-center">
           <span>یک قلب ! یک آرزو</span>
           <h2 className="mt-4">می تونی دنیا رو به جای قشنگ تری تبدیل کنی</h2>

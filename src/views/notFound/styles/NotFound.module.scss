@@ -45,11 +45,8 @@
     height: 120px;
 
     background: #fff;
-    background: linear-gradient(top, #fff 100%);
-    background: -webkit-linear-gradient(top, #fff 100%);
-    background: -moz-linear-gradient(top, #fff 100%);
-    background: -ms-linear-gradient(top, #fff 100%);
-    background: -o-linear-gradient(top, #fff 100%);
+    background: linear-gradient(to top, #fff 100%);
+   
 
     border-radius: 100px;
 

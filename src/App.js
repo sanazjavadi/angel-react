@@ -1,4 +1,8 @@
-import { Switch, BrowserRouter as Router, Route } from "react-router-dom";
+import {
+  Switch,
+  BrowserRouter as Router,
+  Route,
+} from "react-router-dom";
 
 //components
 import Header from "./layouts/common/Header";
@@ -12,9 +16,8 @@ import Explore from "./views/explore";
 import YourSupport from "./views/yourSupport";
 import NotFound from "./views/notFound";
 
-
 //styles
-import 'bootstrap/dist/css/bootstrap.min.css';
+import "bootstrap/dist/css/bootstrap.min.css";
 import "./design/_main.css";
 
 function App() {

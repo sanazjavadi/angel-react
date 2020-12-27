@@ -1,23 +1,23 @@
 export const Links = [
     {
       title: 'خانه',
-      link: '',
+      link: '/',
     },
     {
       title: 'چه کارهایی میکنیم',
-      link: 'about',
+      link: '/about',
     },
     {
       title: 'تماس با ما',
-      link: 'contact',
+      link: '/contact',
     },
 
     {
       title: 'فروشگاه مهربانی',
-      link: 'explore',
+      link: '/explore',
     },
     {
       title: 'حمایت شما',
-      link: 'your-support',
+      link: '/your-support',
     },
   ]
