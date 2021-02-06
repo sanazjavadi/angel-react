@@ -1,30 +1,26 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-//components
-import Button from "../Button";
-
 //styles
 import Styles from './styles/Product.module.scss'
 
+//assets
+import QuoteIcon from '../../svg/RightQuotationMark'
+import GIftBoxIcon from '../../svg/GiftBox'
+
 function Index(props) {
   return (
-    <div className={`${Styles['dream-block']} p-4`}>
-      <div className={Styles["inner-box"]}>
-        <div className={Styles["image-box"]}>
-          <figure className={Styles["image"]}>
-            <Link to="/">
-              <blockquote className={Styles["oval-thought-border"]}>
-                <div className={Styles["big-bubble"]}></div>
-                <div className={Styles["small-bubble"]}></div>
-                من اسمم مریمه. من خیلی دوس دارم یه عروسک داشته باشم که باهاش حرف کنم.
-              </blockquote>
-            </Link>
-          </figure>
-        </div>
+    <div className={`${Styles['dream-block']}`}>
+      <div className="px-4 pt-3 text-right">
+        <QuoteIcon className={`${Styles['qoute-svg']}`} />
       </div>
-      <div className={`${Styles['lower-content']} pb-3`}>
-        <div className="d-flex align-items-center pb-2">
+
+      <blockquote className={`${Styles["inner-box"]} px-4 py-2 text-right text-bold`}>
+
+        من اسمم مریمه. من خیلی دوس دارم یه عروسک داشته باشم که باهاش حرف کنم
+      </blockquote>
+      <div className={`${Styles['lower-content']} py-3 d-flex align-items-center justify-content-between w-100`}>
+        <div className="d-flex align-items-center">
           <div className={Styles["avatar"]}>
             <img
               className="img-fluid"
@@ -33,11 +29,13 @@ function Index(props) {
             />
           </div>
           <h4 className="pr-2">
+
             <Link to="/"> آرزوی بهاره کوچولو</Link>
           </h4>
         </div>
 
-        <Button size="lg">می خوام به برآوردن این آرزو کمک کنم</Button>
+        <GIftBoxIcon className={Styles.giftbox} />
+
       </div>
     </div>
   );
