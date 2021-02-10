@@ -1,63 +1,61 @@
-@import '../../../design/index.scss';
+@import "../../../design/index.scss";
 
 .dream-block {
-    position: relative;
-    margin-bottom: 30px;
-    max-width: 380px;
-    border-radius: 10px;
-    width: 100%;
-    overflow: hidden;
-    box-shadow: 3px 3px 20px rgb(240, 221, 225);
-    transform:rotate(-2deg) translateZ(0);
-    transition:all 0.3s linear;
-    cursor: pointer;
-    &:hover{
-      transform: none;
-    }
-    blockquote{
-      color:$dark-blue;
-      font-size: 16px;
-      font-weight: 900;
-    }
-    .qoute-svg{
-      width: 30px;
-      height: 30px;
-      fill:#aaedeb;
-     }
-    .inner-box {
-      position: relative;
-      overflow: hidden;
-      transition: all 300ms ease;
-    }
-  
-    .lower-content {
-      position: relative;
-      padding: 0 20px 0;
-      background: rgb(21,255,146);
-      background: linear-gradient(140deg, rgba(21,255,146,0.47102591036414565) 5%, rgba(61,209,205,1) 80%);
-      .avatar {
-        width:50px;
-        height: 50px;
-        border-radius: 50%;
-        overflow: hidden;
-        border:3px solid white;
-      }
-      h4 {
-        a {
-          position: relative;
-          display: block;
-          font-size: 14px;
-          line-height: 2.4em;
-          color: white;
-          font-weight: 700;
-        }
-      }
+  margin-bottom: 30px;
+  max-width: 380px;
+  border-radius: 10px;
+  width: 100%;
+  overflow: hidden;
+  box-shadow: 3px 3px 20px rgb(240, 221, 225);
 
-      .giftbox{
-        width: 35px;
-        height: 35px;
-        fill:white;
+  transition: all 0.3s linear;
+  cursor: pointer;
+  &:hover {
+    transform: rotate(-2deg) translateZ(0);
+  }
+  blockquote {
+    color: $dark-blue;
+    font-size: 16px;
+    font-weight: 900;
+    overflow: hidden;
+    min-height: 70px;
+    transition: all 300ms ease;
+    offset-rotate: auto;
+  }
+  .qoute-svg {
+    width: 30px;
+    height: 30px;
+    fill: rgb(159,217,246);
+  }
+  .lower-content {
+    background: rgb(159,217,246);
+    background: linear-gradient(140deg, rgba(159,217,246,1) 0%, rgba(179,221,242,1) 67%);
+    .avatar {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 3px solid white;
+      img {
+        object-fit: cover;
+        max-width: 100%;
+        min-height: 100%;
       }
-  
+    }
+    h4 {
+      a {
+        display: block;
+        font-size: 14px;
+        line-height: 2.4em;
+        color: white;
+        font-weight: 700;
+      }
+    }
+
+    .giftbox {
+      width: 35px;
+      height: 35px;
+      fill: white;
     }
   }
+}

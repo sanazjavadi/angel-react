@@ -6,7 +6,7 @@ import Styles from './styles/About.module.scss'
 function About(props) {
     return (
         <section className={Styles['section-margin']}>
-    <div className="container">
+    <div className="container mb-5">
       <div className="row justify-content-center">
       <div className="col-lg-6 col-md-12 col-11">
           <div className={Styles.description}>
@@ -27,7 +27,7 @@ function About(props) {
         <div className="col-lg-6 col-md-12 col-11">
           <div className={`${Styles['img-desc']} d-flex justify-content-center`}>
             <img
-              src="https://image.freepik.com/free-vector/businessman-is-standing-stairs-reaching-star-sky-flat-illustration-goals-dreams-business-career-concept-modern-design-flat-style-illustration-isolated_126608-320.jpg"
+              src="https://opencollective.com/static/images/home/makecommunity-section-illustration.png"
               className="img-fluid"
               alt=""
             />

@@ -9,3 +9,8 @@
     @extend %font-heading;
     color: $dark-blue;
   }
+.sliderBtn{
+  svg{
+    cursor: pointer;
+  }
+}
