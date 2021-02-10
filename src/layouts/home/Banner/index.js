@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 
 //components
 import BaseButton from "../../../components/Button";
+import Modal from '../../../components/Modal'
 import Auth from "../../Auth";
 
 //styles
@@ -58,8 +59,10 @@ function Banner(props) {
           </div>
         </div>
       </div>
+<Modal status={status} changeStatus={() => setStatus(false)}>
+<Auth />
+</Modal>
 
-    <Auth status={status} changeStatus={() => setStatus(false)}/>
     </section>
   );
 }

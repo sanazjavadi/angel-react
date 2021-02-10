@@ -1,0 +1,12 @@
+@import '../../../design/index.scss';
+
+.badge {
+    border-radius: 50%;
+    background-color: $yellow;
+    color: $dark-blue;
+    font-size: 13px;
+    font-weight: 700;
+    text-align: center;
+    height: 30px;
+    width: 30px;
+  }
