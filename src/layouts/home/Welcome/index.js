@@ -1,4 +1,5 @@
 import React from 'react'
+import { useHistory } from 'react-router-dom'
 
 //components
 import BaseButton from '../../../components/Button'
@@ -11,6 +12,7 @@ import Gift from '../../../svg/Gift'
 import Home from '../../../svg/Home'
 
 function Welcome(props) {
+  const history = useHistory()
     return (
         <section className={`${Styles['section-margin']} text-center`}>
         <div className="container">
@@ -32,9 +34,12 @@ function Welcome(props) {
               </p>
               <div className="row after">
                 <div className="col">
-                  <BaseButton theme="lightbtn">
+             
+                  <BaseButton theme="lightbtn"  handleClick={()=> history.push('/your-support')}>
                     اطلاعات بیشتر
                   </BaseButton>
+                 
+                  
                 </div>
               </div>
             </div>
@@ -54,7 +59,7 @@ function Welcome(props) {
               </p>
               <div className="row">
                 <div className="col">
-                  <BaseButton theme="lightbtn">
+                  <BaseButton theme="lightbtn" handleClick={()=> history.push('/your-support')}>
                     اطلاعات بیشتر
                   </BaseButton>
                 </div>

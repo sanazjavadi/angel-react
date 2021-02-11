@@ -1,0 +1,30 @@
+@import '../../../design/index.scss';
+
+
+.section-margin{
+    margin-top:300px;
+    .custom-tab{
+        width: 65%;
+        margin: auto;
+        display: flex;
+        a{
+            width: 50%;
+            text-align: center;
+            padding:2rem 0;
+            border:1px solid $light-blue;
+            @extend %font-content;
+            color: $dark-gray;
+            font-size: 1.5rem;
+        }
+      
+    }
+    .tab-content{
+        border:1px solid $light-blue;
+        padding:2rem 0.5rem;
+        width: 65% !important;
+        text-align: right;
+        margin:0 auto !important;
+    }
+}
+
+

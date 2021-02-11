@@ -1,5 +1,4 @@
 import React from "react";
-import PropTypes from "prop-types";
 
 //styles
 import Styles from "./Styles/Button.module.scss";
@@ -9,8 +8,7 @@ function BaseButton(props) {
   return (
     <button
       type="button"
-     
-      onClick={() => handleClick()}
+      onClick={handleClick}
       className={`${Styles[`btn-${size}`]} ${Styles[`${theme}`]}`}
     >
       {children}

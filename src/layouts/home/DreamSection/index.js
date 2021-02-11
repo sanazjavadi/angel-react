@@ -55,7 +55,7 @@ function DreamSection(props) {
               <div
                 className="col-lg-4 col-md-6 col-sm-7 col-xs-9 col-11 d-flex  justify-content-center"
               >
-                <ProductCart name={product.name} img={product.image}>
+                <ProductCart {...product} key={product.id}>
                   {product.dream}
                 </ProductCart>
               </div>

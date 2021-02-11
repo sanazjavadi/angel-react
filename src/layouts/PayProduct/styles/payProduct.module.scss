@@ -1,0 +1,121 @@
+@import '../../../design/index.scss';
+
+
+.product-cart{
+    width: 45%;
+    max-width: 600px;
+    height: auto;
+    background-color: white;
+    border: 2px solid lighten($light-blue, 5px);
+    box-shadow: 0 1px 1px 1px rgb(252, 249, 249);
+    position: relative;
+    border-radius: 10px;
+ @media(max-width:1059px){
+     width: 50%;
+ }
+ @media(max-width:860px){
+    width: 65%;
+}
+@media(max-width:750px){
+    width: 75%;
+}
+        img{
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: 5px solid #fff;
+            object-fit: cover;
+            top: -45px;
+            left:50%;
+            transform: translateX(-50%);
+        }
+        p{
+            @extend %font-content;
+            color:$dark-gray;
+           font-size: 16px;
+           font-weight: 900;
+        }
+       span{
+            @extend %font-content;
+            color:$dark-gray;
+           font-size: 16px;
+           
+        }
+        blockquote{
+            @extend %font-content;
+            color:$dark-gray;
+           font-size:13px;
+        }
+        .product-body{
+            span{
+                @extend %font-content;
+                color:$dark-gray;
+                position: relative;
+                &::before{
+                    position: absolute;
+                    content: '';
+                    width:230px;
+                    height: 3px;
+                    background-color: $light-blue;
+                    left: 80px;
+                    top:50%;
+                    @media(max-width:1297px){
+                        width: 200px;
+                    }
+                    @media(max-width:1180px){
+                        width:180px;
+                    }
+                    @media(max-width:622px){
+                        width:130px;
+                    }
+                }
+                &::after{
+                    position: absolute;
+                    content: '';
+                    width: 230px;
+                    height: 3px;
+                    background-color: $light-blue;
+                    right: 80px;
+                    top:50%;
+                    @media(max-width:1297px){
+                        width:200px;
+                    }
+                    @media(max-width:1180px){
+                        width:180px;
+                    }
+                    @media(max-width:622px){
+                        width:130px;
+                    }
+                }
+            }
+        
+        }
+      
+    
+}
+.form-control {
+    direction: rtl;
+    width: 100%;
+    padding:10px;
+    font-size: $input-font-size;
+    line-height: $input-line-height;
+    color: $input-font-color;
+    background-color: #fff;
+    border: $size-input-border solid $input-border-color;
+    font-weight: $input-font-weight;
+    will-change: border-color, box-shadow;
+    border-radius: $size-input-border-radius;
+    resize: none;
+    box-shadow: none;
+    transition: box-shadow 0.25s cubic-bezier(0.27, 0.01, 0.38, 1.06), border 0.25s cubic-bezier(0.27, 0.01, 0.38, 1.06);
+    &:focus {
+      outline: none;
+      appearance: none;
+      border: $size-input-border solid darken($input-border-color, 20px);
+    }
+    &::placeholder{
+        direction: rtl;
+        padding: 0;
+    }
+  }

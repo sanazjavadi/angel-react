@@ -1,5 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
+
+//components
+import Modal from '../Modal'
+import PayProduct from '../../layouts/PayProduct'
 
 //styles
 import Styles from './styles/Product.module.scss'
@@ -8,8 +12,14 @@ import Styles from './styles/Product.module.scss'
 import QuoteIcon from '../../svg/RightQuotationMark'
 import GIftBoxIcon from '../../svg/GiftBox'
 
-function Index({children, img, name}) {
+function Index(props) {
+   const {children, image, name, id} = props
+   const [modal, setModal]= useState(false)
+  const openPayModal = ()=> {
+  setModal(true)
+  }
   return (
+    <>
     <div className={`${Styles['dream-block']}`}>
       <div className="px-4 pt-3 text-right">
         <QuoteIcon className={`${Styles['qoute-svg']}`} />
@@ -22,7 +32,7 @@ function Index({children, img, name}) {
         <div className="d-flex align-items-center">
           <div className={Styles["avatar"]}>
             <img
-              src={img}
+              src={image}
               alt=""
             />
           </div>
@@ -32,10 +42,15 @@ function Index({children, img, name}) {
           </h4>
         </div>
 
-        <GIftBoxIcon className={Styles.giftbox} />
+        <GIftBoxIcon className={Styles.giftbox} onClick={openPayModal}/>
 
       </div>
     </div>
+<Modal status={modal} changeStatus={()=> setModal(false)}>
+
+<PayProduct {...props}/>
+</Modal>
+    </>
   );
 }
 
