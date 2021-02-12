@@ -13,9 +13,12 @@
             padding:2rem 0;
             border:1px solid $light-blue;
             @extend %font-content;
-            color: $dark-gray;
+            color: $dark-blue;
             font-size: 1.5rem;
+          
+            
         }
+        
       
     }
     .tab-content{

@@ -43,10 +43,10 @@ function Contact(props) {
                     className="form-control mt-2"
                   ></textarea>
 
-<div className="mt-3 text-right">
-<Button >ارسال</Button>
-</div>
-                
+                  <div className="mt-3 text-right">
+                    <Button >ارسال</Button>
+                  </div>
+
                 </div>
               </div>
             </div>

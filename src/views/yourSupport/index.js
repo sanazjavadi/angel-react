@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 //components
 import Hero from '../../layouts/common/Hero'
@@ -11,17 +11,19 @@ import { Tabs, Tab } from 'react-bootstrap'
 
 
 function YourSupport(props) {
+
+    const[key, setKey] = useState('org')
     return (
         <div className="container-fluid">
             <Hero>
                 حمایت شما        </Hero>
             <section className={styles['section-margin']}>
-                <Tabs defaultActiveKey="org" id="uncontrolled-tab-example" bsPrefix={styles['custom-tab']}>
+                <Tabs activeKey={key} onSelect={(k) => setKey(k)} defaultActiveKey="org" id="uncontrolled-tab-example" bsPrefix={styles['custom-tab']}>
                     <Tab eventKey="org" title="سازمان" style={{'width':' 65%'}}  className="mx-auto p-3" >
                     <Organization/>
                         </Tab>
-                    <Tab eventKey="human" title="فرد" style={{'width':' 65%'}}  className="mx-auto p-3">
-                        gggggggggg
+                    <Tab activeKey={key} onSelect={(k) => setKey(k)} eventKey="human" title="فرد" style={{'width':' 65%'}}  className="mx-auto p-3">
+                        
                      </Tab>
 
                 </Tabs>

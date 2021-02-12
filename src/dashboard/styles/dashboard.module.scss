@@ -1,0 +1,36 @@
+@import '../../design/index.scss';
+
+
+.dashboard{
+    header{
+        border-bottom: 1px solid $light-gray;
+    }
+    .avatar{
+   img{
+       width: 30px;
+       height: 30px;
+   }
+    }
+    .nav{
+        li{
+            @extend %font-content;
+            color:$dark-gray;
+            font-size: 1rem;
+            border-radius: 10px;
+            cursor: pointer;
+            &:hover{
+                background-color:lighten($light-gray, 15px);
+                color:$yellow;
+            }
+        }
+    }
+    .dreams-status{
+        div{
+            cursor: pointer;
+            width: 200px;
+            height: 160px;
+            border-radius: 10px;
+            background-color: lighten($yellow, 25px);
+        }
+    }
+}
