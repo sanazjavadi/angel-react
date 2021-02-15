@@ -19,6 +19,7 @@ function Contact(props) {
       <Hero>تماس با ما</Hero>
 
       <section className={Styles["section-margin"]}>
+
         <div className="container-fluid">
           <div className="row justify-content-center ">
             <div

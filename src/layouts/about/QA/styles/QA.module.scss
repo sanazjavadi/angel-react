@@ -1,0 +1,13 @@
+@import '../../../../design/index.scss';
+
+.QA{
+    margin-top:250px;
+    h3{
+        @extend %font-heading;
+        color:$dark-blue;
+        line-height: 0;
+    }
+    p{
+        @extend %font-content;
+    }
+}
