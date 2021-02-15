@@ -22,7 +22,7 @@ function Welcome(props) {
               className={`col-12 col-md-6 col-sm-10 col-lg-6 ${Styles['home-support__col']}  m-auto`}
             >
               <div className={`${Styles['home-support__col__img']}`}>
-                <Gift />
+         <Gift/>
               </div>
     
               <h3 className={`${Styles['home-support__col__title']}`}>
@@ -35,7 +35,7 @@ function Welcome(props) {
               <div className="row after">
                 <div className="col">
              
-                  <BaseButton theme="lightbtn"  handleClick={()=> history.push('/your-support')}>
+                  <BaseButton theme="darkbtn"  handleClick={()=> history.push('/your-support')}>
                     اطلاعات بیشتر
                   </BaseButton>
                  
@@ -59,7 +59,7 @@ function Welcome(props) {
               </p>
               <div className="row">
                 <div className="col">
-                  <BaseButton theme="lightbtn" handleClick={()=> history.push('/your-support')}>
+                  <BaseButton theme="darkbtn" handleClick={()=> history.push('/your-support')}>
                     اطلاعات بیشتر
                   </BaseButton>
                 </div>

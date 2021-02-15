@@ -2,11 +2,18 @@
 
 .section-margin {
     padding: $section-padding-lg;
-    background-color: $dark-blue;
+    background: url(https://c.bonfireassets.com/images/cloud.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
     text-align: center;
+    @media(max-width:768px){
+      background-position:50% 40px;
+      
+    }
     .title {
       @extend %font-heading;
-      color: white;
+      color: $dark-blue;
     }
     .home-support__col {
       padding: 40px 50px;
@@ -22,14 +29,14 @@
     }
     .home-support__col__title {
       @extend %font-heading;
-      color: white;
+      color: $dark-blue;
       @media (max-width: 991px) {
         font-size: 1.5rem;
       }
     }
     .home-support__col__text {
       @extend %font-content;
-      color: #fff;
+      color: $dark-blue;
       max-width: 90%;
       margin-right: auto;
       margin-left: auto;
