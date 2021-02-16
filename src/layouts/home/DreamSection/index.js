@@ -6,70 +6,51 @@ import ProductCart from '../../../components/Product'
 
 //styles
 import Styles from './styles/DreamSection.module.scss'
+import{Container, Row, Col} from 'react-bootstrap'
 
 //assets
-import NextSvg from '../../../svg/Next'
-import BackSvg from '../../../svg/Back'
+// import NextSvg from '../../../svg/Next'
+// import BackSvg from '../../../svg/Back'
 
 function DreamSection(props) {
 
   const { products } = useContext(AppContext)
-  const [Index, setIndex] = useState({prev:0, next:3})
+  const [Index] = useState({prev:0, next:3})
   const lastProduct = products.splice(0,Index.next)
   
-  const priviesImage= () => {
-    if(Index < 0){
-      setIndex(products.lenght - 1)
-    }
-    else{
-      setIndex(Index - 1)
-    }
-    
-  }
-  
-  const nextImage = () => {
-    if(Index > products.length -1 )
-    {
-      setIndex(0)
-    }
-    else{
-      setIndex(Index + 1)
-    }
-    
-  }
 
   return (
     <section className={Styles['sec-dream']}>
-      <div className="row justify-content-center">
+      <Row className="justify-content-center">
         <div className={`${Styles['sec-title']} col-10 col-lg-6 text-center m-auto`}>
           <h2>
             لیست آرزوهای بچه ها رو ببین و هر کدوم رو خواستی برآورده کن
             </h2>
         </div>
-      </div>
+      </Row>
 
-      <div className="container-fluid mt-5">
-        <div className="row justify-content-center">
+      <Container fluid className="mt-5">
+        <Row className="justify-content-center">
           {
             lastProduct.map(product =>
-              <div
-                className="col-lg-4 col-md-6 col-sm-7 col-xs-9 col-11 d-flex  justify-content-center"
+              <Col lg={4} md={6} sm={7} xs={9}
+                className="col-11 d-flex justify-content-center"
               >
                 <ProductCart {...product} key={product.id}>
                   {product.dream}
                 </ProductCart>
-              </div>
+              </Col>
             )
           }
 
-          <div className={`d-flex ${Styles.sliderBtn}`}>
+          {/* <div className={`d-flex ${Styles.sliderBtn}`}>
             <NextSvg className="ml-3" onClick={priviesImage}/>
             <BackSvg className="mr-3" onClick={nextImage} />
 
-          </div>
+          </div> */}
 
-        </div>
-      </div>
+        </Row>
+      </Container>
     </section>
   )
 }

@@ -8,16 +8,20 @@ import DreamSection from '../../layouts/home/DreamSection'
 import CountUp from '../../layouts/home/CountUpSection'
 import Help from '../../layouts/home/Help'
 
+//styles
+import {Container} from 'react-bootstrap'
+
+
 function Home(props) {
     return (
-      <div className="container-fluid">
+      <Container fluid className="px-0">
           <Banner/>
           <About />
           <Welcome />
           <DreamSection />
           <CountUp />
           <Help />
-      </div>
+      </Container>
     )
 }
 

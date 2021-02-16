@@ -15,20 +15,20 @@ function Welcome(props) {
   const history = useHistory()
     return (
         <section className={`${Styles['section-margin']} text-center`}>
-        <div className="container">
+        <div className="container px-0">
           <h2 className={`${Styles.title} text-center`}> حمایت شما </h2>
           <div className="row align-items-stretch">
             <div
               className={`col-12 col-md-6 col-sm-10 col-lg-6 ${Styles['home-support__col']}  m-auto`}
             >
-              <div className={`${Styles['home-support__col__img']}`}>
+              <div className={`${Styles['support-img']} pb-5`}>
          <Gift/>
               </div>
     
-              <h3 className={`${Styles['home-support__col__title']}`}>
+              <h4 className={`${Styles['support-title']} mb-3`}>
                 به عنوان یک فرد
-              </h3>
-              <p className={`${Styles['home-support__col__text']}`}>
+              </h4>
+              <p className={`${Styles['support-text']}`}>
                 شما عزیزان می‌توانید کمک‌های نقدی خود را از طریق پرداخت آنلاین در
                 لینک و یا حساب کمپین فرشته در بانک ملت به شماره اهدا کنید.
               </p>
@@ -46,14 +46,14 @@ function Welcome(props) {
             <div
               className={`col-12 col-md-6 col-sm-10 col-lg-6 ${Styles['home-support__col']}  m-auto`}
             >
-              <div className={`${Styles['home-support__col__img']}`}>
+              <div className={`${Styles['support-img']} pb-5`}>
                 <Home/>
               </div>
     
-              <h3 className={`${Styles['home-support__col__title']}`}>
+              <h4 className={`${Styles['support-title']} mb-3`}>
                 به عنوان یک سازمان
-              </h3>
-              <p className={`${Styles['home-support__col__text']}`}>
+              </h4>
+              <p className={`${Styles['support-text']}`}>
                 شما عزیزان می‌توانید کمک‌های نقدی خود را از طریق پرداخت آنلاین در
                 لینک و یا حساب کمپین فرشته در بانک ملت به شماره اهدا کنید.
               </p>
