@@ -6,6 +6,7 @@ import { Links } from "../../../constans/data";
 
 //styles
 import Styles from "./styles/MobileMenu.module.scss";
+import { Container } from 'react-bootstrap'
 
 //assets
 import Logo from "../../../svg/Logo";
@@ -15,7 +16,7 @@ function Mobilemenu(props) {
   const [displayMenu, setdisplayMenu] = useState(false);
   const location = useLocation();
   return (
-    <div className="container-fluid">
+    <Container fluid className="px-0" >
       <div
         className={`${Styles["mobile-header"]} d-flex justify-content-between align-items-center`}
       >
@@ -57,7 +58,7 @@ function Mobilemenu(props) {
           ))}
         </ul>
       </div>
-    </div>
+    </Container>
   );
 }
 

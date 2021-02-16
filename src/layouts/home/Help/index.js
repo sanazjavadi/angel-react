@@ -13,7 +13,7 @@ function Help(props) {
           <div className="row align-items-stretch">
             <div className="col-12  d-flex justify-content-center">
               <img
-                src="https://image.flaticon.com/icons/svg/942/942751.svg"
+                src="https://opencollective.com/static/images/home/weareopen-illustration-md.png"
                 alt=""
                 className="img-fluid mb-4"
                 width="200"

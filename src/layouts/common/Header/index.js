@@ -9,6 +9,7 @@ import { Links } from "../../../constans/data";
 
 //styles
 import Styles from "./styles/Header.module.scss";
+import { Row, Col } from 'react-bootstrap'
 
 //svg
 import Logo from "../../../svg/Logo";
@@ -28,7 +29,7 @@ function Header(props) {
   };
 
   const handleResize = () => {
-    if (window.innerWidth < 500) {
+    if (window.innerWidth < 554) {
       setMobileMenu(true);
     } else {
       setMobileMenu(false);
@@ -57,19 +58,18 @@ function Header(props) {
         <MobileMenu />
       ) : (
         <>
-          {" "}
-          <div className="row justify-content-center pt-3 pb-3">
-            <div className="col-lg-4 d-flex justify-content-center">
+          <Row className="justify-content-center pt-3 pb-3">
+            <Col lg={4} className="d-flex justify-content-center">
               <Logo height="100" width="100" />
-            </div>
-          </div>
-          <div className="row justify-content-center mt-2">
-            <div className="col-lg-8 col-m-8 col-sm-12 d-flex justify-content-center">
+            </Col>
+          </Row>
+          <Row className="justify-content-center mt-2">
+            <Col lg={8} md={8} sm={12} className="d-flex justify-content-center">
               <ul className={`${scrolled && Styles.scrolled} ${Styles.header}`}>
                 {scrolled && (
-                  <div className={Styles["minimize-icon"]}>
+                  <li className={Styles["minimize-icon"]}>
                     <Logo width="40" height="40" />
-                  </div>
+                  </li>
                 )}
 
                 {Links.map((link, index) => (
@@ -86,8 +86,8 @@ function Header(props) {
                   </li>
                 ))}
               </ul>
-            </div>
-          </div>
+            </Col>
+          </Row>
         </>
       )}
     </>

@@ -1,49 +1,55 @@
-@import '../../../../design/index.scss';
+@import "../../../../design/index.scss";
 
 .header {
-    display: flex;
-    justify-content: space-between;
-    width: 80%;
-    font-weight: 900;
-    cursor: pointer;
-    
-        li{
-            a{
-                color: #696478;
-            
-        }
-        .isActive{
-          color:$dark-blue;
-          
-        }
-@media (max-width:620px){
-font-size: 0.9rem;
-}
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  font-weight: 900;
+  cursor: pointer;
+
+  li {
+    a {
+      color: #696478;
     }
-  
-}
-  .scrolled {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: 900;
-    background: white;
-    cursor: pointer;
-    position: fixed;
-    width: 100%;
-    border-bottom: 1px solid $light-gray;
-    left: 0;
-    top: 0;
-    right: 0;
-    z-index: 12;
-    padding: 2rem;
-    li {
-      padding: 0 1rem;
+    .isActive {
+      color: $dark-blue;
     }
-    .minimize-icon {
+    @media (max-width: 620px) {
+      font-size: 0.9rem;
+    }
+  }
+}
+.scrolled {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 900;
+  background: white;
+  cursor: pointer;
+  position: fixed;
+  width: 100%;
+  border-bottom: 1px solid $light-gray;
+  left: 0;
+  top: 0;
+  right: 0;
+  z-index: 12;
+  padding: 2rem;
+  li {
+    padding: 0 1rem;
+    @media(max-width:768px){
+      padding: 0 0.5rem;
+  }
+  }
+  @media(max-width:768px){
+      font-size: 0.8rem;
+  }
+  .minimize-icon {
+   position: relative;
+    @media(mim-width:768px){
       position: absolute;
       top: 50%;
       right: 25px;
       transform: translate(-25px, -50%);
-    }
   }
+  }
+}
