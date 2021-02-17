@@ -3,7 +3,7 @@ import {
   BrowserRouter as Router,
   Route,
 } from "react-router-dom";
-import { ProviderContext } from './context/context'
+
 
 //components
 import Header from "./layouts/common/Header";
@@ -24,22 +24,22 @@ import "./design/_main.css";
 
 const App = () => {
   return (
-    <ProviderContext>
-      <div className="app">
-        <Router>
-          <Header />
-          <Switch>
-            <Route exact component={Home} path="/" />
-            <Route component={About} path="/about" />
-            <Route component={Contact} path="/contact" />
-            <Route component={Explore} path="/explore" />
-            <Route component={YourSupport} path="/your-support" />
-            <Route component={NotFound} path="*" />
-          </Switch>
-          <Footer />
-        </Router>
-      </div>
-    </ProviderContext>
+
+    <div className="app">
+      <Router>
+        <Header />
+        <Switch>
+          <Route exact component={Home} path="/" />
+          <Route component={About} path="/about" />
+          <Route component={Contact} path="/contact" />
+          <Route component={Explore} path="/explore" />
+          <Route component={YourSupport} path="/your-support" />
+          <Route component={NotFound} path="*" />
+        </Switch>
+        <Footer />
+      </Router>
+    </div>
+
 
   );
 }

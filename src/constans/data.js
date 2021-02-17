@@ -13,7 +13,7 @@ export const Links = [
   },
 
   {
-    title: 'فروشگاه مهربانی',
+    title: 'گشت و گذار',
     link: '/explore',
   },
   {
@@ -22,7 +22,7 @@ export const Links = [
   },
 ]
 
-export const Products = [
+export const Dreams = [
   {
     name: 'النا',
     image: 'https://wallpapercave.com/wp/wp2630487.jpg',
@@ -140,4 +140,393 @@ export const Products = [
     id:18
   }
   ,
+  {
+    name: 'ستایش',
+    image: 'https://wallpapercave.com/wp/wp2630487.jpg',
+    dream: 'من آرزو دارم یک ماشین کنترلی داشته باشم و یک تبلت دوست دارم داشته باشم.',
+    id:20
+  }
+  ,
+  {
+    name: 'ستایش',
+    image: 'https://wallpapercave.com/wp/wp2630487.jpg',
+    dream: 'من آرزو دارم یک ماشین کنترلی داشته باشم و یک تبلت دوست دارم داشته باشم.',
+    id:18
+  }
+  ,
+  {
+    name: 'ستایش',
+    image: 'https://wallpapercave.com/wp/wp2630487.jpg',
+    dream: 'من آرزو دارم یک ماشین کنترلی داشته باشم و یک تبلت دوست دارم داشته باشم.',
+    id:18
+  }
+  ,
+  {
+    name: 'ستایش',
+    image: 'https://wallpapercave.com/wp/wp2630487.jpg',
+    dream: 'من آرزو دارم یک ماشین کنترلی داشته باشم و یک تبلت دوست دارم داشته باشم.',
+    id:18
+  }
+  ,
+  {
+    name: 'ستایش',
+    image: 'https://wallpapercave.com/wp/wp2630487.jpg',
+    dream: 'من آرزو دارم یک ماشین کنترلی داشته باشم و یک تبلت دوست دارم داشته باشم.',
+    id:18
+  }
+  ,
+  {
+    name: 'ستایش',
+    image: 'https://wallpapercave.com/wp/wp2630487.jpg',
+    dream: 'من آرزو دارم یک ماشین کنترلی داشته باشم و یک تبلت دوست دارم داشته باشم.',
+    id:18
+  }
+  ,
+  {
+    name: 'ستایش',
+    image: 'https://wallpapercave.com/wp/wp2630487.jpg',
+    dream: 'من آرزو دارم یک ماشین کنترلی داشته باشم و یک تبلت دوست دارم داشته باشم.',
+    id:18
+  }
+  ,
+  {
+    name: 'ستایش',
+    image: 'https://wallpapercave.com/wp/wp2630487.jpg',
+    dream: 'من آرزو دارم یک ماشین کنترلی داشته باشم و یک تبلت دوست دارم داشته باشم.',
+    id:18
+  }
+  ,
+  {
+    name: 'ستایش',
+    image: 'https://wallpapercave.com/wp/wp2630487.jpg',
+    dream: 'من آرزو دارم یک ماشین کنترلی داشته باشم و یک تبلت دوست دارم داشته باشم.',
+    id:18
+  }
+  ,
+  {
+    name: 'ستایش',
+    image: 'https://wallpapercave.com/wp/wp2630487.jpg',
+    dream: 'من آرزو دارم یک ماشین کنترلی داشته باشم و یک تبلت دوست دارم داشته باشم.',
+    id:18
+  }
+  ,
+  {
+    name: 'ستایش',
+    image: 'https://wallpapercave.com/wp/wp2630487.jpg',
+    dream: 'من آرزو دارم یک ماشین کنترلی داشته باشم و یک تبلت دوست دارم داشته باشم.',
+    id:18
+  }
+  ,
+
+  {
+    name: 'ستایش',
+    image: 'https://wallpapercave.com/wp/wp2630487.jpg',
+    dream: 'من آرزو دارم یک ماشین کنترلی داشته باشم و یک تبلت دوست دارم داشته باشم.',
+    id:18
+  }
+  ,
+  {
+    name: 'ستایش',
+    image: 'https://wallpapercave.com/wp/wp2630487.jpg',
+    dream: 'من آرزو دارم یک ماشین کنترلی داشته باشم و یک تبلت دوست دارم داشته باشم.',
+    id:18
+  }
+  ,  {
+    name: 'ستایش',
+    image: 'https://wallpapercave.com/wp/wp2630487.jpg',
+    dream: 'من آرزو دارم یک ماشین کنترلی داشته باشم و یک تبلت دوست دارم داشته باشم.',
+    id:18
+  }
+  ,
+  {
+    name: 'ستایش',
+    image: 'https://wallpapercave.com/wp/wp2630487.jpg',
+    dream: 'من آرزو دارم یک ماشین کنترلی داشته باشم و یک تبلت دوست دارم داشته باشم.',
+    id:18
+  }
+  ,
+
+  {
+    name: 'ستایش',
+    image: 'https://wallpapercave.com/wp/wp2630487.jpg',
+    dream: 'من آرزو دارم یک ماشین کنترلی داشته باشم و یک تبلت دوست دارم داشته باشم.',
+    id:18
+  }
+  ,
+  {
+    name: 'ستایش',
+    image: 'https://wallpapercave.com/wp/wp2630487.jpg',
+    dream: 'من آرزو دارم یک ماشین کنترلی داشته باشم و یک تبلت دوست دارم داشته باشم.',
+    id:18
+  }
+  ,
+  {
+    name: 'ستایش',
+    image: 'https://wallpapercave.com/wp/wp2630487.jpg',
+    dream: 'من آرزو دارم یک ماشین کنترلی داشته باشم و یک تبلت دوست دارم داشته باشم.',
+    id:18
+  }
+  ,
+  {
+    name: 'ستایش',
+    image: 'https://wallpapercave.com/wp/wp2630487.jpg',
+    dream: 'من آرزو دارم یک ماشین کنترلی داشته باشم و یک تبلت دوست دارم داشته باشم.',
+    id:18
+  }
+  ,
+
+  {
+    name: 'ستایش',
+    image: 'https://wallpapercave.com/wp/wp2630487.jpg',
+    dream: 'من آرزو دارم یک ماشین کنترلی داشته باشم و یک تبلت دوست دارم داشته باشم.',
+    id:18
+  }
+  ,
+  {
+    name: 'ستایش',
+    image: 'https://wallpapercave.com/wp/wp2630487.jpg',
+    dream: 'من آرزو دارم یک ماشین کنترلی داشته باشم و یک تبلت دوست دارم داشته باشم.',
+    id:18
+  }
+  ,
+  {
+    name: 'ستایش',
+    image: 'https://wallpapercave.com/wp/wp2630487.jpg',
+    dream: 'من آرزو دارم یک ماشین کنترلی داشته باشم و یک تبلت دوست دارم داشته باشم.',
+    id:18
+  }
+  ,
+
+  {
+    name: 'ستایش',
+    image: 'https://wallpapercave.com/wp/wp2630487.jpg',
+    dream: 'من آرزو دارم یک ماشین کنترلی داشته باشم و یک تبلت دوست دارم داشته باشم.',
+    id:18
+  }
+  ,
+  {
+    name: 'ستایش',
+    image: 'https://wallpapercave.com/wp/wp2630487.jpg',
+    dream: 'من آرزو دارم یک ماشین کنترلی داشته باشم و یک تبلت دوست دارم داشته باشم.',
+    id:18
+  }
+  ,
+  {
+    name: 'ستایش',
+    image: 'https://wallpapercave.com/wp/wp2630487.jpg',
+    dream: 'من آرزو دارم یک ماشین کنترلی داشته باشم و یک تبلت دوست دارم داشته باشم.',
+    id:18
+  }
+  ,
+  {
+    name: 'ستایش',
+    image: 'https://wallpapercave.com/wp/wp2630487.jpg',
+    dream: 'من آرزو دارم یک ماشین کنترلی داشته باشم و یک تبلت دوست دارم داشته باشم.',
+    id:18
+  }
+  ,
+
+    {
+    name: 'ستایش',
+    image: 'https://wallpapercave.com/wp/wp2630487.jpg',
+    dream: 'من آرزو دارم یک ماشین کنترلی داشته باشم و یک تبلت دوست دارم داشته باشم.',
+    id:18
+  }
+  ,
+  {
+    name: 'ستایش',
+    image: 'https://wallpapercave.com/wp/wp2630487.jpg',
+    dream: 'من آرزو دارم یک ماشین کنترلی داشته باشم و یک تبلت دوست دارم داشته باشم.',
+    id:18
+  }
+  ,
+  {
+    name: 'ستایش',
+    image: 'https://wallpapercave.com/wp/wp2630487.jpg',
+    dream: 'من آرزو دارم یک ماشین کنترلی داشته باشم و یک تبلت دوست دارم داشته باشم.',
+    id:18
+  }
+  ,
+  {
+    name: 'ستایش',
+    image: 'https://wallpapercave.com/wp/wp2630487.jpg',
+    dream: 'من آرزو دارم یک ماشین کنترلی داشته باشم و یک تبلت دوست دارم داشته باشم.',
+    id:18
+  }
+  ,
+
+  {
+    name: 'ستایش',
+    image: 'https://wallpapercave.com/wp/wp2630487.jpg',
+    dream: 'من آرزو دارم یک ماشین کنترلی داشته باشم و یک تبلت دوست دارم داشته باشم.',
+    id:18
+  }
+  ,
+  {
+    name: 'ستایش',
+    image: 'https://wallpapercave.com/wp/wp2630487.jpg',
+    dream: 'من آرزو دارم یک ماشین کنترلی داشته باشم و یک تبلت دوست دارم داشته باشم.',
+    id:18
+  }
+  ,
+  {
+    name: 'ستایش',
+    image: 'https://wallpapercave.com/wp/wp2630487.jpg',
+    dream: 'من آرزو دارم یک ماشین کنترلی داشته باشم و یک تبلت دوست دارم داشته باشم.',
+    id:18
+  }
+  ,
+  {
+    name: 'ستایش',
+    image: 'https://wallpapercave.com/wp/wp2630487.jpg',
+    dream: 'من آرزو دارم یک ماشین کنترلی داشته باشم و یک تبلت دوست دارم داشته باشم.',
+    id:18
+  }
+  ,
+    {
+    name: 'ستایش',
+    image: 'https://wallpapercave.com/wp/wp2630487.jpg',
+    dream: 'من آرزو دارم یک ماشین کنترلی داشته باشم و یک تبلت دوست دارم داشته باشم.',
+    id:18
+  }
+  ,
+  {
+    name: 'ستایش',
+    image: 'https://wallpapercave.com/wp/wp2630487.jpg',
+    dream: 'من آرزو دارم یک ماشین کنترلی داشته باشم و یک تبلت دوست دارم داشته باشم.',
+    id:18
+  }
+  ,
+
+  {
+    name: 'ستایش',
+    image: 'https://wallpapercave.com/wp/wp2630487.jpg',
+    dream: 'من آرزو دارم یک ماشین کنترلی داشته باشم و یک تبلت دوست دارم داشته باشم.',
+    id:18
+  }
+  ,
+
+  {
+    name: 'ستایش',
+    image: 'https://wallpapercave.com/wp/wp2630487.jpg',
+    dream: 'من آرزو دارم یک ماشین کنترلی داشته باشم و یک تبلت دوست دارم داشته باشم.',
+    id:18
+  }
+  ,
+  {
+    name: 'ستایش',
+    image: 'https://wallpapercave.com/wp/wp2630487.jpg',
+    dream: 'من آرزو دارم یک ماشین کنترلی داشته باشم و یک تبلت دوست دارم داشته باشم.',
+    id:18
+  }
+  ,
+  {
+    name: 'ستایش',
+    image: 'https://wallpapercave.com/wp/wp2630487.jpg',
+    dream: 'من آرزو دارم یک ماشین کنترلی داشته باشم و یک تبلت دوست دارم داشته باشم.',
+    id:18
+  }
+  ,
+  {
+    name: 'ستایش',
+    image: 'https://wallpapercave.com/wp/wp2630487.jpg',
+    dream: 'من آرزو دارم یک ماشین کنترلی داشته باشم و یک تبلت دوست دارم داشته باشم.',
+    id:18
+  }
+  ,
+  {
+    name: 'ستایش',
+    image: 'https://wallpapercave.com/wp/wp2630487.jpg',
+    dream: 'من آرزو دارم یک ماشین کنترلی داشته باشم و یک تبلت دوست دارم داشته باشم.',
+    id:18
+  }
+  ,
+  {
+    name: 'ستایش',
+    image: 'https://wallpapercave.com/wp/wp2630487.jpg',
+    dream: 'من آرزو دارم یک ماشین کنترلی داشته باشم و یک تبلت دوست دارم داشته باشم.',
+    id:18
+  }
+  ,
+  {
+    name: 'ستایش',
+    image: 'https://wallpapercave.com/wp/wp2630487.jpg',
+    dream: 'من آرزو دارم یک ماشین کنترلی داشته باشم و یک تبلت دوست دارم داشته باشم.',
+    id:18
+  }
+  ,
+  {
+    name: 'ستایش',
+    image: 'https://wallpapercave.com/wp/wp2630487.jpg',
+    dream: 'من آرزو دارم یک ماشین کنترلی داشته باشم و یک تبلت دوست دارم داشته باشم.',
+    id:18
+  }
+  ,
+  {
+    name: 'ستایش',
+    image: 'https://wallpapercave.com/wp/wp2630487.jpg',
+    dream: 'من آرزو دارم یک ماشین کنترلی داشته باشم و یک تبلت دوست دارم داشته باشم.',
+    id:18
+  }
+  ,
+  {
+    name: 'ستایش',
+    image: 'https://wallpapercave.com/wp/wp2630487.jpg',
+    dream: 'من آرزو دارم یک ماشین کنترلی داشته باشم و یک تبلت دوست دارم داشته باشم.',
+    id:18
+  }
+  ,
+  {
+    name: 'ستایش',
+    image: 'https://wallpapercave.com/wp/wp2630487.jpg',
+    dream: 'من آرزو دارم یک ماشین کنترلی داشته باشم و یک تبلت دوست دارم داشته باشم.',
+    id:18
+  }
+  ,
+  {
+    name: 'ستایش',
+    image: 'https://wallpapercave.com/wp/wp2630487.jpg',
+    dream: 'من آرزو دارم یک ماشین کنترلی داشته باشم و یک تبلت دوست دارم داشته باشم.',
+    id:18
+  }
+  ,
+  {
+    name: 'ستایش',
+    image: 'https://wallpapercave.com/wp/wp2630487.jpg',
+    dream: 'من آرزو دارم یک ماشین کنترلی داشته باشم و یک تبلت دوست دارم داشته باشم.',
+    id:18
+  }
+  ,
+
+  {
+    name: 'ستایش',
+    image: 'https://wallpapercave.com/wp/wp2630487.jpg',
+    dream: 'من آرزو دارم یک ماشین کنترلی داشته باشم و یک تبلت دوست دارم داشته باشم.',
+    id:18
+  }
+  ,
+  {
+    name: 'ستایش',
+    image: 'https://wallpapercave.com/wp/wp2630487.jpg',
+    dream: 'من آرزو دارم یک ماشین کنترلی داشته باشم و یک تبلت دوست دارم داشته باشم.',
+    id:18
+  }
+  ,
+  {
+    name: 'ستایش',
+    image: 'https://wallpapercave.com/wp/wp2630487.jpg',
+    dream: 'من آرزو دارم یک ماشین کنترلی داشته باشم و یک تبلت دوست دارم داشته باشم.',
+    id:18
+  }
+  ,
+  {
+    name: 'ستایش',
+    image: 'https://wallpapercave.com/wp/wp2630487.jpg',
+    dream: 'من آرزو دارم یک ماشین کنترلی داشته باشم و یک تبلت دوست دارم داشته باشم.',
+    id:18
+  }
+  ,
 ]
+
+export const dreams0to9 = Dreams.splice(0,9);
+export const dream0tos18 =Dreams.splice(0,18); 

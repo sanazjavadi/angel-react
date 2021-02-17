@@ -7,7 +7,7 @@ const Index = memo(function Index(props) {
     return (
         <>
          <div className="row justify-content-center">
-      <h2 className={`${Styles['hero-title']} text-center`}>
+      <h2 className={`${Styles['hero-title']} text-center w-100`}>
 
           {props.children}
       </h2>

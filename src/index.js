@@ -2,10 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { ProviderContext } from './state/context';
 
 ReactDOM.render(
   <React.StrictMode>
+    <ProviderContext>
     <App />
+    </ProviderContext>
   </React.StrictMode>,
   document.getElementById('root')
 );

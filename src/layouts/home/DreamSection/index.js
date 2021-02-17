@@ -1,5 +1,5 @@
-import React, { useContext, useState } from 'react'
-import { AppContext } from '../../../context/context'
+import React, { useState } from 'react'
+import { useGlobalContext } from '../../../state/context'
 
 //components
 import ProductCart from '../../../components/Product'
@@ -14,9 +14,9 @@ import{Container, Row, Col} from 'react-bootstrap'
 
 function DreamSection(props) {
 
-  const { products } = useContext(AppContext)
+  const { dreams } = useGlobalContext()
   const [Index] = useState({prev:0, next:3})
-  const lastProduct = products.splice(0,Index.next)
+  const lastProduct = dreams.splice(0,Index.next)
   
 
   return (

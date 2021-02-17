@@ -1,7 +1,7 @@
 @import '../../../../design/index.scss';
 
 .hero-title {
-    margin-top: 5rem;
+    margin-top: 4rem;
     @extend %font-heading;
     color: $dark-blue;
     @media (max-width: 680px) {
