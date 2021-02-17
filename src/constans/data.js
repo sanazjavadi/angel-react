@@ -527,6 +527,3 @@ export const Dreams = [
   }
   ,
 ]
-
-export const dreams0to9 = Dreams.splice(0,9);
-export const dream0tos18 =Dreams.splice(0,18); 

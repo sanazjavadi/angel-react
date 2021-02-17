@@ -1,6 +1,5 @@
 import React, { useEffect, useState, useRef } from 'react'
 import { useGlobalContext } from '../../state/context'
-import {dreams0to9,dream0tos18} from '../../constans/data'
 
 //components
 import Hero from '../../layouts/common/Hero'
@@ -15,15 +14,7 @@ import Styles from './styles/Explore.module.scss'
 function Explore(props) {
 
   const { dreams, fetchDreams } = useGlobalContext();
-  const [id, setId] = useState({ from: 0, to: 50 })
-  const [Index, setIndex] = useState({prev:0, next:9})
-  const [lastDreams, setLastDreams] = useState(dreams0to9)
-
-
-  // useEffect(() => {
-  //   fetchDreams(id.from, id.to)
-  // }, [])
-
+  const [size, setSize] = useState(9)
 
   // add loader refrence 
   const loader = useRef(null);
@@ -39,20 +30,21 @@ function Explore(props) {
     const observer = new IntersectionObserver(handleObserver, options);
     if (loader.current) {
       observer.observe(loader.current)
+      console.log(observer.observe(loader.current))
     }
 
   }, []);
-  useEffect(() => {
-    setLastDreams(dream0tos18)
-}, [Index])
 
+  useEffect(() => {
+    fetchDreams(0, size)
+  }, [size])
   // here we handle what happens when user scrolls to Load More div
   // in this case we just update page variable
   const handleObserver = (entities) => {
     const target = entities[0];
     if (target.isIntersecting) {
-      setId({...id, to :id.to + 50 })
-      setIndex({...Index, next:Index.next + 9})
+      setSize((previd) => previd + 9)
+      console.log(size)
     }
   }
 
@@ -61,20 +53,20 @@ function Explore(props) {
       <Hero>
         گشت و گذار
         <div className="w-25 mx-auto">
-        <Input placeholder="جستجو کن"/>
+          <Input placeholder="جستجو کن" />
         </div>
-      
-        </Hero>
+
+      </Hero>
 
       <section className={Styles['section-margin']}>
         <div className="row justify-content-center">
-
           {
-            lastDreams.map((product) => <div
+            dreams.map((dream) => <div
               className="col-lg-4 col-md-6 col-sm-7 col-xs-9 col-11 d-flex  justify-content-center"
             >
-              <ProductCart {...product} key={product.id}>
-                {product.dream}
+
+              <ProductCart {...dream} key={dream.id}>
+
               </ProductCart>
             </div>)
 

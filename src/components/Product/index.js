@@ -13,7 +13,7 @@ import QuoteIcon from '../../svg/RightQuotationMark'
 import GIftBoxIcon from '../../svg/GiftBox'
 
 function Index(props) {
-   const {children, image, name, id} = props
+   const { name} = props
    const [modal, setModal]= useState(false)
   const openPayModal = ()=> {
   setModal(true)
@@ -26,15 +26,15 @@ function Index(props) {
       </div>
  
       <blockquote className={`px-4 py-2 text-right text-bold`}>
-            {children}
+        
       </blockquote>
       <div className={`${Styles['lower-content']} py-3 px-3 d-flex align-items-center justify-content-between w-100`}>
         <div className="d-flex align-items-center">
           <div className={Styles["avatar"]}>
-            <img
+            {/* <img
               src={image}
               alt=""
-            />
+            /> */}
           </div>
           <h4 className="pr-2">
 

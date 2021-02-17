@@ -16,7 +16,7 @@ function Index({ changeHandler }) {
             <div className={Styles["form-card"]}>
               <h3 className="text-right">عضویت</h3>
               <Formik
-                initialValues={{ name: '', familyName: '', mobleNumber: '', email: '', password: '' }}
+                initialValues={{ name: '', mobleNumber: '', email: '', password: '' }}
                 validate={values => {
                   const errors = {};
                   if (!values.email) {
@@ -50,15 +50,11 @@ function Index({ changeHandler }) {
                 }) => (
                   <form onSubmit={handleSubmit}>
                     <div className="mb-3">
-                      <Input placeholder="نام" handleChange={handleChange}
+                      <Input placeholder="نام و نام خانوادگی" handleChange={handleChange}
                         handleBlur={handleBlur}
                         value={values.name} />
                     </div>
-                    <div className="mb-3">
-                      <Input placeholder="نام خانوادگی" handleChange={handleChange}
-                        handleBlur={handleBlur}
-                        value={values.familyName} />
-                    </div>
+                 
                     <div className="mb-3">
                       <Input placeholder="ایمیل" type="email" name="email" handleChange={handleChange}
                         handleBlur={handleBlur}

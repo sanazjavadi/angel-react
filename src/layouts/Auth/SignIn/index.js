@@ -26,8 +26,8 @@ function Index({ changeHandler }) {
                   ) {
                     errors.email = 'آدرس ایمیل نامعتبر میباشد';
                   }
-                  else if(!values.password){
-                    errors.password='پسورد را وارد کنید'
+                  else if (!values.password) {
+                    errors.password = 'پسورد را وارد کنید'
                   }
                   return errors;
                 }}
@@ -53,13 +53,13 @@ function Index({ changeHandler }) {
                       <Input placeholder="ایمیل" type="email" name="email" handleChange={handleChange}
                         handleBlur={handleBlur}
                         value={values.email} error={errors.email && touched.email && errors.email} />
-                    
+
                     </div>
                     <div className="mb-3">
                       <Input placeholder="کلمه عبور" type="password" name="password" handleChange={handleChange}
                         handleBlur={handleBlur}
-                        value={values.password}  error={errors.password && touched.password && errors.password}/>
-                     
+                        value={values.password} error={errors.password && touched.password && errors.password} />
+
                     </div>
 
                     <Button className="mb-3" size="block" type="submit" disabled={isSubmitting}>
