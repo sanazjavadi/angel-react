@@ -1,9 +1,11 @@
 import React from "react";
+import { Formik } from 'formik';
 
 //components
 import Hero from "../../layouts/common/Hero";
 import Input from "../../components/Input";
 import Button from "../../components/Button";
+import TextArea from '../../components/TextArea'
 
 //styles
 import Styles from "./styles/Contact.module.scss";
@@ -26,30 +28,77 @@ function Contact(props) {
               className={`${Styles["contact-form"]} col-lg-6 col-md-8 col-sm-11 col-12 d-flex flex-column align-items-center`}
             >
               <h2 className="text-center">ارسال پیام از طریق فرم</h2>
-              <div className={Styles["contact-base-form"]}>
-                <div className={Styles["form-card"]}>
-                  <div>
-                    <Input placeholder="نام شما" />
-                  </div>
-                  <div className="mt-2">
-                    <Input placeholder="ایمیل شما" />
-                  </div>
-                  <div className="mt-2">
-                    <Input placeholder="موضوع" />
-                  </div>
+              <Formik
+                initialValues={{ name: '', email: '', subject: '', msg: '' }}
+                validate={values => {
+                  const errors = {};
+                  if (!values.email) {
+                    errors.email = 'آدرس ایمیل را وارد کنید';
+                  } else if (
+                    !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)
+                  ) {
+                    errors.email = 'آدرس ایمیل نامعتبر میباشد';
+                  }
+                  else if (!values.name) {
+                    errors.name = 'نام خود را وارد کنید'
+                  }
+                  return errors;
+                }}
+                onSubmit={(values, { setSubmitting }) => {
+                  setTimeout(() => {
+                    alert(JSON.stringify(values, null, 2));
+                    setSubmitting(false);
+                  }, 400);
+                }}
+              >
+                {({
+                  values,
+                  errors,
+                  touched,
+                  handleChange,
+                  handleBlur,
+                  handleSubmit,
+                  isSubmitting,
+                  /* and other goodies */
+                }) => (
+                  <form onSubmit={handleSubmit} className={Styles["contact-base-form"]}>
+                    <div className={Styles["form-card"]}>
+                      <div>
+                        <Input placeholder="نام شما" value={values.name} name="name"
+                          handleChange={handleChange}
+                          handleBlur={handleBlur}
+                          error={errors.name && touched.name && errors.name}
+                        />
+                      </div>
+                      <div className="mt-2">
+                        <Input placeholder="ایمیل شما" value={values.email} name="email"
+                          handleChange={handleChange}
+                          handleBlur={handleBlur}
+                          error={errors.email && touched.email && errors.email}
+                        />
+                      </div>
+                      <div className="mt-2">
+                        <Input placeholder="موضوع" value={values.subject} name="subject" handleChange={handleChange} handleBlur={handleBlur} />
+                      </div>
 
-                  <textarea
-                    placeholder="پیام"
-                    rows="4"
-                    className="form-control mt-2"
-                  ></textarea>
+                      <div className="mt-2">
+                        <TextArea placeholder="پیام"
+                          alue={values.msg} name="msg"
+                          handleChange={handleChange}
+                          handleBlur={handleBlur}
+                          rows="4" />
+                      </div>
 
-                  <div className="mt-3 text-right">
-                    <Button >ارسال</Button>
-                  </div>
 
-                </div>
-              </div>
+                      <div className="mt-3 text-right">
+                        <Button type="submit" disabled={isSubmitting}>ارسال</Button>
+                      </div>
+
+                    </div>
+                  </form>
+                )}
+              </Formik>
+
             </div>
             <div
               className={`${Styles.address} col-lg-6 col-md-6 col-10 mt-5 mt-lg-0 d-flex flex-column justify-content-center`}
