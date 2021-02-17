@@ -14,6 +14,7 @@ function Index(props) {
         handleIcon,
         error,
         icon,
+        handleBlur
       }  = props
   return (
     <div className={Styles["wrapper-input"]}>
@@ -29,13 +30,13 @@ function Index(props) {
         }
         dir={align ? "ltr" : "rtl"}
         onChange={(e) => handleChange(e)}
+        onBlur={(e)=> handleBlur(e)}
       />
       {icon && (
         <span onClick={() => handleIcon()}>
-          {/* <i className="['fas', `fa-${icon}`, 'leftIcon']"></i> */}
         </span>
       )}
-      {error && <span></span>}
+      {error && <small className={`text-right w-100 d-block mt-1 mr-1 ${Styles.error}`}>{error}</small>}
     </div>
   );
 }

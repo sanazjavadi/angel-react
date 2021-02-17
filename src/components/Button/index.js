@@ -4,10 +4,12 @@ import React from "react";
 import Styles from "./Styles/Button.module.scss";
 
 function BaseButton(props) {
-  const { children, size, theme, handleClick } = props;
+  const { children, size, theme, handleClick, type, disabled } = props;
   return (
     <button
-      type="button"
+      {...props}
+      disabled={disabled}
+      type={type}
       onClick={handleClick}
       className={`${Styles[`btn-${size}`]} ${Styles[`${theme}`]}`}
     >
@@ -18,7 +20,8 @@ function BaseButton(props) {
 
 BaseButton.defaultProps = {
   theme: "darkbtn",
-  size:'lg'
+  size:'lg',
+  type:'button'
 };
 
 export default BaseButton;
