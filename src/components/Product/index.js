@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 //components
 import Modal from '../Modal'
 import PayProduct from '../../layouts/PayProduct'
+import Progress from '../../components/progress'
 
 //styles
 import Styles from './styles/Product.module.scss'
@@ -12,8 +13,8 @@ import Styles from './styles/Product.module.scss'
 import QuoteIcon from '../../svg/RightQuotationMark'
 import GIftBoxIcon from '../../svg/GiftBox'
 
-function Index(props) {
-   const { name} = props
+function DreamCart(props) {
+   const { name, image, children} = props
    const [modal, setModal]= useState(false)
   const openPayModal = ()=> {
   setModal(true)
@@ -26,15 +27,19 @@ function Index(props) {
       </div>
  
       <blockquote className={`px-4 py-2 text-right text-bold`}>
-        
+        {children}
       </blockquote>
+      <div className="mb-3 px-5">
+      <Progress percantage="70%" allprice={500} payPrice={250}/>
+      </div>
+     
       <div className={`${Styles['lower-content']} py-3 px-3 d-flex align-items-center justify-content-between w-100`}>
         <div className="d-flex align-items-center">
           <div className={Styles["avatar"]}>
-            {/* <img
+            <img
               src={image}
               alt=""
-            /> */}
+            />
           </div>
           <h4 className="pr-2">
 
@@ -54,4 +59,4 @@ function Index(props) {
   );
 }
 
-export default Index;
+export default DreamCart;

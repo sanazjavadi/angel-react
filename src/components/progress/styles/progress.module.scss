@@ -1,0 +1,32 @@
+@import '../../../design/index.scss';
+
+
+.progress-wrapper{
+  width: 100%;
+    .price{
+      @extend %font-content;
+      color:$dark-gray;
+      font-size: 12px;
+      font-weight: 500;
+    }
+}
+.progress {
+    height: 7px;
+    direction: rtl;
+    width:50%;
+    background-color: lightgray;
+    border-radius: 20px;
+  }
+  
+  .progress-done {
+    direction: rtl;
+    height: 100%;
+    width: 0;
+    background: linear-gradient(to left, $dark-blue,$dark-blue);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    transition: 1s ease;
+  }

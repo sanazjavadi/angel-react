@@ -1,23 +1,19 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { useGlobalContext } from '../../../state/context'
+import  { Swiper, SwiperSlide} from 'swiper/react';
 
 //components
 import ProductCart from '../../../components/Product'
 
 //styles
 import Styles from './styles/DreamSection.module.scss'
-import{Container, Row, Col} from 'react-bootstrap'
+import { Container, Row } from 'react-bootstrap'
+import 'swiper/swiper.scss';
 
-//assets
-// import NextSvg from '../../../svg/Next'
-// import BackSvg from '../../../svg/Back'
 
 function DreamSection(props) {
 
   const { dreams } = useGlobalContext()
-  const [Index] = useState({prev:0, next:3})
-  const lastProduct = dreams.splice(0,Index.next)
-  
 
   return (
     <section className={Styles['sec-dream']}>
@@ -31,23 +27,30 @@ function DreamSection(props) {
 
       <Container fluid className="mt-5">
         <Row className="justify-content-center">
-          {
-            lastProduct.map(product =>
-              <Col lg={4} md={6} sm={7} xs={9}
-                className="col-11 d-flex justify-content-center"
-              >
-                <ProductCart {...product} key={product.id}>
+          <Swiper
+         
+            spaceBetween={10}
+            slidesPerView={3}
+            style={{marginRight:'30px'}}
+            onSlideChange={() => console.log('slide change')}
+            onSwiper={(swiper) => console.log(swiper)}
+          >
+            {
+              dreams.map(product =>
+                <SwiperSlide> 
+                
+                  <ProductCart {...product} key={product.id}>
                   {product.dream}
                 </ProductCart>
-              </Col>
-            )
-          }
+              
+                </SwiperSlide>
 
-          {/* <div className={`d-flex ${Styles.sliderBtn}`}>
-            <NextSvg className="ml-3" onClick={priviesImage}/>
-            <BackSvg className="mr-3" onClick={nextImage} />
 
-          </div> */}
+              )
+            }
+      ...
+    </Swiper>
+
 
         </Row>
       </Container>

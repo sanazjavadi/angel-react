@@ -13,40 +13,40 @@ import Styles from './styles/Explore.module.scss'
 
 function Explore(props) {
 
-  const { dreams, fetchDreams } = useGlobalContext();
-  const [size, setSize] = useState(9)
+  const { dreams } = useGlobalContext();
+  // const [size, setSize] = useState(9)
 
-  // add loader refrence 
-  const loader = useRef(null);
+  // // add loader refrence 
+  // const loader = useRef(null);
 
-  useEffect(() => {
-    var options = {
-      root: null,
-      rootMargin: "20px",
-      threshold: 1.0
-    };
-    // initialize IntersectionObserver
-    // and attaching to Load More div
-    const observer = new IntersectionObserver(handleObserver, options);
-    if (loader.current) {
-      observer.observe(loader.current)
-      console.log(observer.observe(loader.current))
-    }
+  // useEffect(() => {
+  //   var options = {
+  //     root: null,
+  //     rootMargin: "20px",
+  //     threshold: 1.0
+  //   };
+  //   // initialize IntersectionObserver
+  //   // and attaching to Load More div
+  //   const observer = new IntersectionObserver(handleObserver, options);
+  //   if (loader.current) {
+  //     observer.observe(loader.current)
+  //     console.log(observer.observe(loader.current))
+  //   }
 
-  }, []);
+  // }, []);
 
-  useEffect(() => {
-    fetchDreams(0, size)
-  }, [size])
-  // here we handle what happens when user scrolls to Load More div
-  // in this case we just update page variable
-  const handleObserver = (entities) => {
-    const target = entities[0];
-    if (target.isIntersecting) {
-      setSize((previd) => previd + 9)
-      console.log(size)
-    }
-  }
+  // useEffect(() => {
+  //   fetchDreams(0, size)
+  // }, [size])
+  // // here we handle what happens when user scrolls to Load More div
+  // // in this case we just update page variable
+  // const handleObserver = (entities) => {
+  //   const target = entities[0];
+  //   if (target.isIntersecting) {
+  //     setSize((previd) => previd + 9)
+  //     console.log(size)
+  //   }
+  // }
 
   return (
     <div className="container-fluid">
@@ -71,9 +71,9 @@ function Explore(props) {
             </div>)
 
           }
-          <div className="loading" ref={loader}>
+          {/* <div className="loading" ref={loader}>
             <h2>Load More</h2>
-          </div>
+          </div> */}
         </div>
       </section>
     </div>
