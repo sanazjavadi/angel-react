@@ -10,8 +10,6 @@ import UploadImage from '../../../components/UploadImage'
 //styles
 import styles from './styles/organization.module.scss'
 
-//assets
-import UploadSvg from '../../../svg/Upload'
 
 export function Organization(props) {
 
@@ -22,7 +20,7 @@ export function Organization(props) {
                 اگر میخواهید به عنوان یک سازمان با کمپین فرشته همکاری داشته باشید فرم زیر را تکمیل کنید
              </p>
             <Formik
-                initialValues={{ orgName: '', managerName: '', orgTel: '', managerTel: '', address: '', desc: '' }}
+                initialValues={{ file: null, orgName: '', managerName: '', orgTel: '', managerTel: '', address: '', desc: '' }}
                 validate={values => {
                     const errors = {};
                     if (!values.orgName) {
@@ -44,10 +42,7 @@ export function Organization(props) {
                     return errors;
                 }}
                 onSubmit={(values, { setSubmitting }) => {
-                    setTimeout(() => {
-                        alert(JSON.stringify(values, null, 2));
-                        setSubmitting(false);
-                    }, 400);
+                 console.log(values)
                 }}
             >
                 {({
@@ -58,6 +53,7 @@ export function Organization(props) {
                     handleBlur,
                     handleSubmit,
                     isSubmitting,
+                    setFieldValue
                     /* and other goodies */
                 }) => (
                     <form className="mt-3 mx-auto d-flex flex-wrap" onSubmit={handleSubmit}>
@@ -102,19 +98,22 @@ export function Organization(props) {
                             </div>
 
                             <div className={`mt-3 mx-auto ${styles['text-area']}`}>
-                                <TextArea rows={3} placeholder="  آدرس ...*" value={values.address}
+                                <TextArea rows={3} placeholder="  آدرس ...*" name="address" value={values.address}
                                     handleBlur={handleBlur}
                                     handleChange={handleChange} />
                             </div>
                             <div className={`mt-3 mx-auto ${styles['text-area']}`}>
                                 <TextArea rows={2} placeholder=" توضیح در مورد سازمان"
+                                name="desc"
                                     value={values.desc}
                                     handleBlur={handleBlur}
                                     handleChange={handleChange} />
                             </div>
                         </div>
                         <div className={`${styles.rightForm} d-flex flex-column align-items-center mt-3`}>
-                            <UploadImage />
+                            <UploadImage id="file" name="file" type="file" handleChange={(event) => {
+                                setFieldValue("file", event.currentTarget.files[0])
+                            }} file={values.file} />
                             <span className="mt-3 mr-3 w-75 text-right">آپلود عکس کارت ملی *</span>
 
                             <div className="w-75 mt-lg-auto mb-3 mt-4">
