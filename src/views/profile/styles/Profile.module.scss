@@ -1,17 +1,41 @@
-@import '../../../design/index.scss';
+@import "../../../design/index.scss";
 
-.profile{
-    margin-bottom:200px;
-    margin-top:350px;
+.profile {
+    margin-bottom: 200px;
+    margin-top: 350px;
     display: flex;
     justify-content: center;
     align-items: center;
-    .userInfo{
+    .user {
         width: 90%;
         max-width: 1200px;
         border-radius: 5px;
-      border:2px solid $light-gray;
+        border: 2px solid $light-gray;
         height: 100px;
-     
+    }
+    .profileImg {
+        background-color: $dark-blue;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .userName{
+        color:$dark-gray;
+    }
+    .userInfo{
+        position: relative;
+        &::after{
+            position: absolute;
+            content:'';
+            width: 2px;
+            height: 17px;
+            background-color: $light-gray;
+            left: -20px;
+            top:30%;
+        }
     }
 }
