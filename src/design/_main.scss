@@ -1,0 +1,72 @@
+
+@import '../design/index.scss';
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+  
+  body {
+    background: white;
+    direction: rtl;
+    
+  }
+  .app{
+    overflow-x: hidden !important;
+    font-family: 'Samim';
+  }
+
+  .modal-content{
+    border:none !important;
+}
+
+.swiper-button-next {
+  position: absolute;
+  bottom:0px;
+  width: 45px;
+  left: calc(47% + 50px);
+  height: 45px;
+  z-index:10;
+  cursor: pointer;
+  display: -moz-box;
+  display: flex;
+  -moz-box-align: center;
+  align-items: center;
+  -moz-box-pack: center;
+  justify-content: center;
+  color: $dark-blue;
+  background-color: $light-blue;
+  border-radius: 50%;
+  &::after {
+    content: url("../assets/img/forward.png");
+    position: absolute;
+    top: 12px;
+  
+  }
+
+}
+.swiper-button-prev {
+  position: absolute;
+ bottom:0px;
+  left: 47%;
+  width: 45px;
+  height: 45px;
+  z-index: 10;
+  cursor: pointer;
+  display: -moz-box;
+  display: flex;
+  -moz-box-align: center;
+  align-items: center;
+  -moz-box-pack: center;
+  justify-content: center;
+  color: $dark-blue;
+  background-color: $light-blue;
+  border-radius: 50%;
+  &::after {
+    content: url("../assets/img/backward.png");
+    position: absolute;
+    top: 12px;
+  
+  }
+}

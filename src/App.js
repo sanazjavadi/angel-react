@@ -20,7 +20,7 @@ import NotFound from "./views/notFound";
 
 //styles
 import "bootstrap/dist/css/bootstrap.min.css";
-import "./design/_main.css";
+import "./design/_main.scss";
 
 const App = () => {
   return (

@@ -1,6 +1,8 @@
 import React from 'react'
 import { useGlobalContext } from '../../../state/context'
-import  { Swiper, SwiperSlide} from 'swiper/react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import SwiperCore, { Navigation } from 'swiper';
+import useWindowSize from '../../../service/hooks/useWindowSize'
 
 //components
 import ProductCart from '../../../components/Product'
@@ -14,6 +16,8 @@ import 'swiper/swiper.scss';
 function DreamSection(props) {
 
   const { dreams } = useGlobalContext()
+  SwiperCore.use([Navigation]);
+  const size = useWindowSize();
 
   return (
     <section className={Styles['sec-dream']}>
@@ -28,21 +32,19 @@ function DreamSection(props) {
       <Container fluid className="mt-5">
         <Row className="justify-content-center">
           <Swiper
-         
             spaceBetween={10}
             slidesPerView={3}
-            style={{marginRight:'30px'}}
-            onSlideChange={() => console.log('slide change')}
-            onSwiper={(swiper) => console.log(swiper)}
+            style={{ marginRight: '30px' }}
+            navigation autoplay
           >
             {
               dreams.map(product =>
-                <SwiperSlide> 
-                
+                <SwiperSlide>
+
                   <ProductCart {...product} key={product.id}>
-                  {product.dream}
-                </ProductCart>
-              
+                    {product.dream}
+                  </ProductCart>
+
                 </SwiperSlide>
 
 
