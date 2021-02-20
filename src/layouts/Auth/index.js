@@ -28,6 +28,6 @@ function Index({ status, changeStatus }) {
       <Comp changeHandler={changePage} />
    
   );
-}
+} 
 
 export default Index;

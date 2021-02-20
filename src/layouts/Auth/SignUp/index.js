@@ -1,4 +1,5 @@
 import { Formik } from 'formik';
+import { useGlobalContext } from '../../../state/context'
 
 //components
 import Input from "../../../components/Input";
@@ -8,6 +9,7 @@ import Button from "../../../components/Button";
 import Styles from "./styles/SignUp.module.scss";
 
 function Index({ changeHandler }) {
+  const { signUp } = useGlobalContext()
   return (
     <section className="mt-5 ">
       <div className="container">
@@ -33,9 +35,10 @@ function Index({ changeHandler }) {
                 }}
                 onSubmit={(values, { setSubmitting }) => {
                   setTimeout(() => {
-                    alert(JSON.stringify(values, null, 2));
+                    signUp(values)
                     setSubmitting(false);
                   }, 400);
+
                 }}
               >
                 {({
@@ -50,11 +53,13 @@ function Index({ changeHandler }) {
                 }) => (
                   <form onSubmit={handleSubmit}>
                     <div className="mb-3">
-                      <Input placeholder="نام و نام خانوادگی" handleChange={handleChange}
+                      <Input placeholder="نام و نام خانوادگی"
+                        name="name"
+                        handleChange={handleChange}
                         handleBlur={handleBlur}
                         value={values.name} />
                     </div>
-                 
+
                     <div className="mb-3">
                       <Input placeholder="ایمیل" type="email" name="email" handleChange={handleChange}
                         handleBlur={handleBlur}

@@ -1,4 +1,5 @@
 import { Formik } from 'formik';
+import { useGlobalContext } from "../../../state/context";
 
 //components
 import Input from "../../../components/Input";
@@ -6,13 +7,15 @@ import Button from "../../../components/Button";
 
 //styles
 import Styles from "./styles/Signin.module.scss";
+import {Container, Row, Col} from 'react-bootstrap'
 
 function Index({ changeHandler }) {
+  const { logIn } = useGlobalContext()
   return (
     <section className="mt-5 pt-5 pb-5">
-      <div className="container">
-        <div className="row justify-content-center">
-          <div className="col-lg-5 col-md-10 col-sm-11 col-12">
+      <Container>
+        <Row className="justify-content-center">
+          <Col lg={5} md={10} sm={11} xs={12}>
             <div className={Styles["form-card"]}>
               <h3 className="text-right"> ورود</h3>
               <Formik
@@ -33,7 +36,7 @@ function Index({ changeHandler }) {
                 }}
                 onSubmit={(values, { setSubmitting }) => {
                   setTimeout(() => {
-                    alert(JSON.stringify(values, null, 2));
+                    logIn(values)
                     setSubmitting(false);
                   }, 400);
                 }}
@@ -78,9 +81,9 @@ function Index({ changeHandler }) {
               </div>
 
             </div>
-          </div>
-        </div>
-      </div>
+          </Col>
+        </Row>
+      </Container>
     </section>
   );
 }
