@@ -3,6 +3,10 @@ import React, { useState } from 'react'
 //styles
 import styles from './styles/profile.module.scss'
 
+//assets
+import ArrowDown from '../../svg/DownArrow'
+import ArrowUp from '../../svg/UpArrow'
+
 function Profile(props) {
 
     const [isOpen, setIsOpen] = useState(false)
@@ -10,8 +14,16 @@ function Profile(props) {
     return (
         <div className={styles.profile} onClick={() => setIsOpen(!isOpen)}>
             <div className={styles.account}>
-                حساب کاربری
-              </div>
+                <span>
+                    حساب کاربری
+               </span>
+                {
+                    isOpen ? <ArrowUp height="15" width="15" fill="#696478" className="mr-1 pb-1" /> :
+                        <ArrowDown height="15" width="15" fill="#696478" className="mr-1 pt-1" />
+                }
+
+
+            </div>
 
             <ul className={styles.drop} style={isOpen ? { 'display': 'block' } : { 'display': 'none' }}>
                 <li className="pt-4">
