@@ -19,16 +19,17 @@
         position: absolute;
         left: 50%;
         border-radius: 10px;
-        top: 10%;
+        top: 18px;
         padding-left: 1.3rem;
         padding-right: 1.3rem;
-        transform: translate(-50%, 10%);
-        background-color: #f4f3f3;
+        transform: translate(-50%, 18px);
+        border:3px solid whitesmoke;
         cursor: pointer;
+        background-color: white;
         font-weight: 400;
         color: $dark-gray;
         font-size: 13px;
-        transition: all .3s linear;
+       
         li {
             &:first-child {
                 font-weight: 600;

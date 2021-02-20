@@ -16,7 +16,7 @@ import Contact from "./views/contact";
 import Explore from "./views/explore";
 import YourSupport from "./views/yourSupport";
 import NotFound from "./views/notFound";
-
+import Profile from './views/profile'
 
 //styles
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -34,6 +34,7 @@ const App = () => {
           <Route component={Contact} path="/contact" />
           <Route component={Explore} path="/explore" />
           <Route component={YourSupport} path="/your-support" />
+          <Route component={Profile} path="/profile" />
           <Route component={NotFound} path="*" />
         </Switch>
         <Footer />

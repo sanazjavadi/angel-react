@@ -1,0 +1,17 @@
+@import '../../../design/index.scss';
+
+.profile{
+    margin-bottom:200px;
+    margin-top:350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .userInfo{
+        width: 90%;
+        max-width: 1200px;
+        border-radius: 5px;
+      border:2px solid $light-gray;
+        height: 100px;
+     
+    }
+}

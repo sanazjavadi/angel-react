@@ -48,8 +48,14 @@
     @media(min-width:768px){
       position: absolute;
       top: 50%;
-      right: 25px;
-      transform: translate(-25px, -50%);
+      right: 30px;
+      transform: translate(-30px, -50%);
   }
+  }
+  .profile{
+    position: absolute;
+    left:30px;
+    top:50%;
+    transform: translate(30px, -50%);
   }
 }

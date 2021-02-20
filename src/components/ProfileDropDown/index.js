@@ -1,4 +1,6 @@
 import React, { useState } from 'react'
+import { useGlobalContext } from '../../state/context'
+import {Link} from 'react-router-dom'
 
 //styles
 import styles from './styles/profile.module.scss'
@@ -8,7 +10,8 @@ import ArrowDown from '../../svg/DownArrow'
 import ArrowUp from '../../svg/UpArrow'
 
 function Profile(props) {
-
+    
+    const {logOut } = useGlobalContext()
     const [isOpen, setIsOpen] = useState(false)
 
     return (
@@ -34,11 +37,14 @@ function Profile(props) {
                     sanaz.jvd72@gmai.com
                         </li>
                 <li className="py-2">
+                    <Link to="/profile">
                     آرزوها
+                    </Link>
+                    
                     </li>
-                <li className="pt-2 pb-4">
+                <li className="pt-2 pb-4" onClick={()=> logOut()}>
                     خروج
-                       </li>
+                </li>
 
             </ul>
 

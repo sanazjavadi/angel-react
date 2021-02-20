@@ -30,7 +30,7 @@ function Header(props) {
   };
 
   const handleResize = () => {
-    if (window.innerWidth < 554) {
+    if (window.innerWidth < 921) {
       setMobileMenu(true);
     } else {
       setMobileMenu(false);
@@ -75,9 +75,14 @@ function Header(props) {
             <Col lg={8} md={8} sm={12} className="d-flex justify-content-center">
               <ul className={`${scrolled && Styles.scrolled} ${Styles.header}`}>
                 {scrolled && (
+                  <>
                   <li className={Styles["minimize-icon"]}>
                     <Logo width="40" height="40" />
                   </li>
+                  <li className={Styles.profile}>
+                     <Profile/>
+                  </li>
+                  </>
                 )}
 
                 {Links.map((link, index) => (
