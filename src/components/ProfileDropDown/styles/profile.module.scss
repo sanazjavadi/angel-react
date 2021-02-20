@@ -1,1 +1,40 @@
-@import '.././../../design/index.scss';
+@import ".././../../design/index.scss";
+
+.profile {
+    position: relative;
+    text-align: right;
+
+    .account {
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #696478;
+        font-weight: 900;
+        &:hover {
+            color: darken($yellow, 20px);
+        }
+    }
+    .drop {
+        position: absolute;
+        left: 50%;
+        border-radius: 10px;
+        top: 10%;
+        padding-left: 1.3rem;
+        padding-right: 1.3rem;
+        transform: translate(-50%, 10%);
+        background-color: #f4f3f3;
+        cursor: pointer;
+        font-weight: 400;
+        color: $dark-gray;
+       
+        li {
+            &:first-child {
+                font-weight: 600;
+            }
+            &:hover {
+                color: $yellow;
+            }
+        }
+    }
+}

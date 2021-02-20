@@ -3,6 +3,7 @@ import { NavLink, useLocation } from "react-router-dom";
 
 //components
 import MobileMenu from "../MobileMenu/";
+import Profile from '../../../components/ProfileDropDown'
 
 //static Data
 import { Links } from "../../../constans/data";
@@ -59,8 +60,15 @@ function Header(props) {
       ) : (
         <>
           <Row className="justify-content-center pt-3 pb-3">
+            <Col lg={4}>
+            </Col>
             <Col lg={4} className="d-flex justify-content-center">
               <Logo height="100" width="100" />
+            </Col>
+            <Col lg={1}>
+            </Col>
+            <Col lg={3} className="d-flex justify-content-center">
+            <Profile/>
             </Col>
           </Row>
           <Row className="justify-content-center mt-2">

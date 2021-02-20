@@ -14,10 +14,10 @@ import 'swiper/swiper.scss';
 
 
 function DreamSection(props) {
-
+  const size = useWindowSize();
   const { dreams } = useGlobalContext()
   SwiperCore.use([Navigation]);
-  const size = useWindowSize();
+
 
   return (
     <section className={Styles['sec-dream']}>
@@ -33,9 +33,9 @@ function DreamSection(props) {
         <Row className="justify-content-center">
           <Swiper
             spaceBetween={10}
-            slidesPerView={3}
+            slidesPerView={size > 600 ? 3 : 1}
             style={{ marginRight: '30px' }}
-            navigation autoplay
+            navigation 
           >
             {
               dreams.map(product =>
