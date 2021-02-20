@@ -8,34 +8,14 @@
     color: white;
     font-weight: 900;
     position: relative;
-    border: 1px solid #f0f0e7;
+
   
     div {
       line-height: 1.4em;
       text-align: center;
-      :first-child {
-        display: inline-block;
-  
-        font-size: 50px;
-        color: #ffaa14;
-  
-        text-align: center;
-      }
-      :nth-child(2) {
-        display: inline-block;
-  
-        font-size: 50px;
-        color: pink;
-  
-        text-align: center;
-      }
-      :last-child {
-        display: inline-block;
-        color: #ff437e;
-        border-radius: 100%;
-  
-        font-size: 50px;
-        text-align: center;
-      }
+      color: $yellow;
+      display: inline-block;
+      font-size: 50px;
+      text-align: center;
     }
   }

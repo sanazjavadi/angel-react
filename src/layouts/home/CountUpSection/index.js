@@ -37,9 +37,9 @@ function CountUpSection(props) {
               تا الان
             </h2>
             <div className={Styles.counts}>
-              <span>{count.toString()[2] }</span>
-              <span>{count.toString()[1] }</span>
               <span>{count.toString()[0] }</span>
+              <span>{count.toString()[1] }</span>
+              <span>{count.toString()[2] }</span>
             </div>
     
             <h2 className="pt-4">

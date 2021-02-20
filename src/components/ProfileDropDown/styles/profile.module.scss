@@ -3,7 +3,7 @@
 .profile {
     position: relative;
     text-align: right;
-
+   
     .account {
         cursor: pointer;
         display: flex;
@@ -27,13 +27,19 @@
         cursor: pointer;
         font-weight: 400;
         color: $dark-gray;
-       
+        font-size: 13px;
+        transition: all .3s linear;
         li {
             &:first-child {
                 font-weight: 600;
             }
             &:hover {
                 color: $yellow;
+            }
+            &:nth-child(2){
+                &:hover{
+                    color:$dark-gray;
+                }
             }
         }
     }
