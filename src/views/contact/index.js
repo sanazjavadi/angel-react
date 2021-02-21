@@ -104,8 +104,8 @@ function Contact(props) {
               className={`${Styles.address} col-lg-6 col-md-6 col-10 mt-5 mt-lg-0 d-flex flex-column justify-content-center`}
             >
               <div className="d-flex  align-items-center">
-              <img src="https://img.icons8.com/officel/16/000000/worldwide-location--v2.png" alt=""/>
-                {/* <Location /> */}
+            
+                <Location />
                 <h2 className=" pr-2">آدرس</h2>
               </div>
 

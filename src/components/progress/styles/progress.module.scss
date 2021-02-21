@@ -10,7 +10,7 @@
       font-weight: 600;
       
       .pay{
-        color:#5C61FF;
+        color:$dark-blue;
         font-size: 13px;
         font-weight: 700;
       }
@@ -29,7 +29,7 @@
     direction: rtl;
     height: 100%;
     width: 0;
-    background: linear-gradient(to left, #5C61FF,#5C61FF);
+    background:$dark-blue;
     border-radius: 20px;
     display: flex;
     justify-content: center;

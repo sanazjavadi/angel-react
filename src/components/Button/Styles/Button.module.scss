@@ -32,6 +32,13 @@
       background: darken($light-blue, 7px);
     }
   }
+  .outlinebtn {
+    @extend .btn;
+    color: $dark-blue;
+    border:2px solid $dark-blue;
+    background-color: inherit;
+  
+  }
   .btn-lg {
     @extend .btn;
     padding: 0 1.5rem;

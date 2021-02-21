@@ -58,7 +58,7 @@ function Footer(props) {
                       </li>
                     </ul>
                     <div className="mt-3">
-                      <Button theme="lightbtn" handleClick={()=> history.push('/contact')}>
+                      <Button theme="outlinebtn" handleClick={()=> history.push('/contact')}>
                         تماس با ما
                       </Button>
                     </div>
@@ -72,7 +72,7 @@ function Footer(props) {
 
 
       <div className={`${styles['footer-bottom']}`}>
-        <Container fluid className="d-flex align-items-center justify-content-between py-2">
+        <Container fluid className="d-flex align-items-center flex-wrap justify-content-between py-2">
           <div className={`${styles['copyright']}`}>
             تمام حقوق برای بنیاد نیکوکاری فرشته محفوظ است
           </div>
@@ -88,8 +88,8 @@ function Footer(props) {
               </Link>
             </li>
             <li >
-              <Link to="/">
-                <Instagram width="40" height="40" />
+              <Link to="/" >
+                <Instagram width="35" height="35" />
               </Link>
             </li>
           </ul>

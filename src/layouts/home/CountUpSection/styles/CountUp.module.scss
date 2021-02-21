@@ -1,21 +1,21 @@
 @import '../../../../design/index.scss';
 
 .count-up {
-    width: 100%;
-    background-color: $dark-blue;
+    width: 100%;  
     text-align: center;
-    padding: 4rem 0;
+    padding: 3rem 0;
     color: white;
-    font-weight: 900;
-    position: relative;
+    font-weight: 700;
+   color: white;
+background-color: $dark-blue;
 
   
     div {
-      line-height: 1.4em;
+      line-height: 1em;
       text-align: center;
-      color: $yellow;
+  
       display: inline-block;
-      font-size: 50px;
+      font-size: 30px;
       text-align: center;
     }
   }

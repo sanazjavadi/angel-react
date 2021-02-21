@@ -2,7 +2,7 @@
 
 .header {
     h3 {
-        color: $dark-gray;
+        color: $dark-blue;
         font-size: 1.8rem;
     }
     p {
@@ -12,9 +12,12 @@
 .rightContent {
     @extend %font-content;
     h4 {
-        color: $dark-gray;
+        color: $dark-blue;
         font-size: 1.2rem;
         font-weight: 600;
+    }
+    p {
+        color: $dark-gray;
     }
 }
 .help-section {

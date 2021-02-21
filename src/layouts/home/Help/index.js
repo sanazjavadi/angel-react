@@ -30,7 +30,7 @@ function Help(props) {
             <Col lg={6} md={6} xs={12} sm={6}
               className="d-flex justify-content-lg-end justify-content-center mb-3"
             >
-              <BaseButton handleClick={()=> history.push('/contact')}>
+              <BaseButton  handleClick={()=> history.push('/contact')}>
                 تماس با ما
               </BaseButton>
             </Col>
