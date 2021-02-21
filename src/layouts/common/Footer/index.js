@@ -1,11 +1,12 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 
 //components
-import BaseButton from '../../../components/Button'
+import Button from '../../../components/Button'
 
 //styles
-import Styles from "./styles/Footer.module.scss";
+import styles from "./styles/Footer.module.scss";
+import { Container, Row, Col } from 'react-bootstrap'
 
 //assets
 import Twiiter from '../../../svg/Twitter';
@@ -14,40 +15,41 @@ import Youtube from "../../../svg/Youtube";
 import Logo from '../../../svg/Logo'
 
 function Footer(props) {
+  const history = useHistory()
   return (
-    <footer className={`${Styles["main-footer"]} mt-5 pt-5`}>
-      {/* footer upper */}
-      <div className={Styles["footer-upper"]}>
-        <div className="container-fluid">
-          <div className="row justify-content-center">
-            {/* Big Column */}
-            <div className={`${Styles['big-column']} col-xl-6 col-lg-12 col-md-12 col-sm-11 col-11`}>
-              <div className="row ">
+    <footer className={`${styles["main-footer"]} mt-5 pt-5`}>
+
+      <div className={`py-5 ${styles["footer-upper"]}`}>
+        <Container fluid>
+          <Row className="justify-content-center">
+
+            <Col xl={6} lg={12} md={12} sm={11} xs={11} className={styles['big-column']}>
+              <Row>
                 {/* Footer Column */}
-                <div className={`${Styles['footer-column']} col-lg-6 col-md-6 col-sm-11 col-11 m-auto`}>
-                  <div className={`${Styles['footer-widget']} ${Styles['logo-widget']}`}>
-                    <h4 className={Styles['widget-title']} >درباره ما</h4>
-                    <div className={Styles['text']} >
+                <Col lg={6} md={6} sm={11} xs={11} className={`${styles['footer-column']} m-auto`}>
+                  <div className="text-right">
+                    <h4 className={`${styles['widget-title']}`} >درباره ما</h4>
+                    <div className={`mb-4 ${styles['text']}`} >
                       به مهربانی به مهربانی تلاشی دسته جمعی ست تا کودکان ایران
                       به دلیل مشکلات اقتصادی از تحصیل بازنمانند
                     </div>
-                    <div className={Styles.logo}>
+                    <div className={styles.logo}>
                       <Logo height="50" width="50" />
                     </div>
                   </div>
-                </div>
+                </Col>
 
-                {/* Footer Column */}
-              </div>
-            </div>
 
-            {/* Big Column */}
-            <div className={`${Styles['big-column']} col-xl-6 col-lg-12 col-md-12 col-sm-11 col-11 mt-4 mt-lg-0`}>
-              <div className="row clearfix">
-                <div className={`${Styles['footer-column']} col-lg-6 col-md-6 col-sm-11 col-11 m-auto`}>
-                  <h4 className={Styles['widget-title']} >تماس با ما</h4>
-                  <div className={Styles['widget-content']}>
-                    <ul>
+              </Row>
+            </Col>
+
+
+            <div className={`${styles['big-column']} col-xl-6 col-lg-12 col-md-12 col-sm-11 col-11 mt-4 mt-lg-0`}>
+              <Row className="clearfix">
+                <Col lg={6} md={6} sm={11} xs={11} className="m-auto text-right">
+                  <h4 className={` text-right ${styles['widget-title']}`} >تماس با ما</h4>
+                  <div className={styles['widget-content']}>
+                    <ul className="mb-4">
                       <li>
                         <a href="tel:666-888-0000">0218685</a>
                       </li>
@@ -56,42 +58,42 @@ function Footer(props) {
                       </li>
                     </ul>
                     <div className="mt-3">
-                      <BaseButton theme="lightbtn">
+                      <Button theme="lightbtn" handleClick={()=> history.push('/contact')}>
                         تماس با ما
-                      </BaseButton>
+                      </Button>
                     </div>
                   </div>
-                </div>
-              </div>
+                </Col>
+              </Row>
             </div>
-          </div>
-        </div>
+          </Row>
+        </Container>
       </div>
 
-      {/* Footer Bottom */}
-      <div className={Styles['footer-bottom']}>
-        <div className="container-fluid">
-          <div className={`${Styles['copyright']}  mr-lg-5`}>
+
+      <div className={`${styles['footer-bottom']}`}>
+        <Container fluid className="d-flex align-items-center justify-content-between py-2">
+          <div className={`${styles['copyright']}`}>
             تمام حقوق برای بنیاد نیکوکاری فرشته محفوظ است
           </div>
-          <ul className={Styles['social-icon-two']}>
-            <li>
+          <ul className={styles['social-icon-two']}>
+            <li className="ml-3">
               <Link to="#">
-               <Twiiter width="30" height="30"/>
+                <Twiiter width="40" height="40" />
               </Link>
             </li>
-            <li>
+            <li className="ml-3">
               <Link to="/">
-                <Youtube width="30" height="30"/>
+                <Youtube width="40" height="40" />
               </Link>
             </li>
-            <li>
+            <li >
               <Link to="/">
-              <Instagram width="30" height="30"/>
+                <Instagram width="40" height="40" />
               </Link>
             </li>
           </ul>
-        </div>
+        </Container>
       </div>
     </footer>
   );

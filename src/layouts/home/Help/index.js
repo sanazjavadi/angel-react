@@ -1,42 +1,46 @@
 import React from 'react'
-
-//styles
-import Styles from './styles/Help.module.scss'
+import {useHistory} from 'react-router-dom'
 
 //components
 import BaseButton from '../../../components/Button'
 
+//styles
+import Styles from './styles/Help.module.scss'
+import {Container, Row, Col} from 'react-bootstrap'
+
+
 function Help(props) {
+  const history = useHistory()
     return (
         <section className={Styles['margin-section']}>
-        <div className="container">
-          <div className="row align-items-stretch">
-            <div className="col-12  d-flex justify-content-center">
+        <Container>
+          <Row className="align-items-stretch">
+            <Col xs={12} className="d-flex justify-content-center">
               <img
                 src="https://opencollective.com/static/images/home/weareopen-illustration-md.png"
                 alt=""
                 className="img-fluid mb-4"
                 width="200"
               />
-            </div>
-          </div>
+            </Col>
+          </Row>
     
           <h2 className={`${Styles['support-title']} text-center`}>سوالی دارین ؟</h2>
-          <div className="row align-items-stretch ">
-            <div
-              className="col-12 col-md-6 d-flex justify-content-lg-end justify-content-center mb-3"
+          <Row className="align-items-stretch ">
+            <Col lg={6} md={6} xs={12} sm={6}
+              className="d-flex justify-content-lg-end justify-content-center mb-3"
             >
-              <BaseButton>
+              <BaseButton handleClick={()=> history.push('/contact')}>
                 تماس با ما
               </BaseButton>
-            </div>
-            <div
-              className="col-12 col-md-6 d-flex justify-content-lg-start justify-content-center mb-3"
+            </Col>
+            <Col lg={6} xs={12} md={6} sm={6}
+              className="d-flex justify-content-lg-start justify-content-center mb-3"
             >
-              <BaseButton theme="lightbtn"> سوال های متداول </BaseButton>
-            </div>
-          </div>
-        </div>
+              <BaseButton theme="lightbtn" handleClick={()=> history.push('/contact')}> سوال های متداول </BaseButton>
+            </Col>
+          </Row>
+        </Container>
       </section>
     )
 }

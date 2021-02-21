@@ -15,7 +15,7 @@ function Profile(props) {
 
     return (
         <div>
-            <Hero />
+           
             <section className={styles.profile}>
                 <div className={`d-flex align-items-center justify-content-between px-5 ${styles.user}`}>
                     <div className={`${styles.userInfo} d-flex`}>
@@ -31,10 +31,15 @@ function Profile(props) {
                         </span>
                     </div>
                     </div>
-                  
-                    <Button className="mr-auto">
+                  <div className={`d-flex align-items-center justify-content-between ${styles.orderCount}`}>
+                      <p className="mb-0 font-weight-bold">
+                          تعداد آرزوهایی که برآورده کردین: 
+                      </p>
+                  <Button className="mr-auto">
                         ویرایش اطلاعات کاربری
                     </Button>
+                  </div>
+                   
                 </div>
             </section>
         </div>

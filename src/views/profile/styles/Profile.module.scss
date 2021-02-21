@@ -2,10 +2,11 @@
 
 .profile {
     margin-bottom: 200px;
-    margin-top: 350px;
+    margin-top: 150px;
     display: flex;
     justify-content: center;
     align-items: center;
+    
     .user {
         width: 90%;
         max-width: 1200px;
@@ -37,5 +38,13 @@
             left: -20px;
             top:30%;
         }
+    }
+    .orderCount{
+        width: 73%;
+        color:$dark-gray;
+        @media (max-width:1265px){
+            width: 68%;
+        }
+       
     }
 }

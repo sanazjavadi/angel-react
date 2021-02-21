@@ -2,69 +2,22 @@
 
 .social-icon-two li {
     display: inline-block;
-    margin-left: 30px;
     a {
       display: block;
-      -webkit-transition: all 300ms ease;
-      -moz-transition: all 300ms ease;
-      -ms-transition: all 300ms ease;
-      -o-transition: all 300ms ease;
       transition: all 300ms ease;
     }
   }
   
-  .parallax-scene {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-  }
-  .anim-icons {
-    position: absolute;
-    left: 0;
-    top: 0;
-    right: 0;
-    height: 100%;
-    width: 100%;
-    max-width: 1170px;
-    margin: 0 auto;
-  }
-  .anim-icons .icon {
-    position: absolute !important;
-    background-repeat: no-repeat;
-    background-position: center;
-  }
   .main-footer {
-    position: relative;
     background-color: $dark-blue;
   }
   
-  .main-footer .footer-upper {
-    position: relative;
-    background-position: center;
-    background-repeat: no-repeat;
-    padding: 20px 0px 40px;
-  }
-  .main-footer .footer-upper .footer-column {
-    position: relative;
-    margin-bottom: 40px;
-  }
-  .main-footer  .widget-title {
-    text-align: right;
-    position: relative;
-    font-size: 24px;
-    font-weight: 400;
+.widget-title {
+    font-size: 1.5rem;
     color: #ffffff;
-    margin-bottom: 35px;
   }
   .widget-content {
-    position: relative;
-    font-size: 16px;
-    font-weight: 400;
-    text-align: right;
-    color: #ffffff;
-    margin-bottom: 35px;
+    font-size: 1rem;
     li {
       padding: 0.5rem;
     }
@@ -72,50 +25,31 @@
       color: white;
     }
   }
-  .logo-widget {
-    position: relative;
-    text-align: right;
-  }
-  .logo-widget .logo {
+
+ .logo {
     width: 20%;
     cursor: pointer;
-    -webkit-transition: all 300ms ease;
-    -moz-transition: all 300ms ease;
-    -ms-transition: all 300ms ease;
-    -o-transition: all 300ms ease;
     transition: all 300ms ease;
     z-index: 9999;
   }
   
-  .logo-widget .text {
+  .text {
     color: #c8bfe3;
     font-size: 16px;
     line-height: 30px;
-    margin-bottom: 20px;
   }
   
-  .main-footer .footer-bottom {
-    padding: 50px 0px;
-    text-align: center;
+  .footer-bottom {
+   text-align: center;
     border-top: 1px solid rgba(255, 255, 255, 0.15);
   }
   
-  .main-footer .footer-bottom .social-icon-two {
-    float: left;
-  }
-  .main-footer .footer-bottom .copyright {
-    float: right;
+  .copyright {
     color: #c8bfe3;
     font-weight: 400;
     font-size: 16px;
-    line-height: 30px;
   }
-  
-  @media only screen and (max-width: 1139px) {
-    .main-footer .links-widget {
-      padding-left: 0;
-    }
-  }
+
   @media only screen and (max-width: 767px) {
     .main-footer .footer-upper {
       padding: 70px 0 30px;
