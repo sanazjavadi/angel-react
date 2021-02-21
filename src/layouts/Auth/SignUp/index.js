@@ -8,6 +8,11 @@ import Button from "../../../components/Button";
 //styles
 import Styles from "./styles/SignUp.module.scss";
 
+//assets
+import FacebookSvg from '../../../svg/Facebook'
+import YahooSvg from '../../../svg/Yahoo'
+import GmailSvg from '../../../svg/Google'
+
 function Index({ changeHandler }) {
   const { signUp } = useGlobalContext()
   return (
@@ -90,16 +95,13 @@ function Index({ changeHandler }) {
         <div className="row justify-content-center mt-3 pb-2">
           <div className="col-lg-3 col-md-4 col-sm-5 col-6 d-flex justify-content-around">
             <div className={Styles["social-login"]}>
-              <img src="https://www.ceviz.io/static/google-logo-3f3dbee38e0e229df60c33e98ae0186d.png" alt="" />
+              <GmailSvg width="50" height="50"/>
             </div>
             <div className={Styles["social-login"]}>
-              <img
-                src="https://avdivine.co.uk/wp-content/uploads/2019/12/facebook-new.png"
-                alt=""
-              />
+            <FacebookSvg width="50" height="50"/>
             </div>
             <div className={Styles["social-login"]}>
-              <img src="https://img.icons8.com/clouds/100/000000/linkedin.png" alt="" />
+             <YahooSvg width="50" height="50"/>
             </div>
           </div>
         </div>

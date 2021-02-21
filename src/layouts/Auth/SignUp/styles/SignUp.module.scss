@@ -29,12 +29,8 @@
     cursor: pointer;
     color: #fff;
     text-align: center;
-  
     transition: transform 0.3s linear;
-    img {
-      width: 50px;
-      height: 50px;
-    }
+ 
     &:hover {
       transform: scale(1.3);
     }

@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 //layouts
 import Hero from '../../layouts/common/Hero'
 import Organization from '../../layouts/yourSupport/organization'
-import TimeLine from '../../layouts/about/TimeLine'
+import Human from '../../layouts/yourSupport/human'
 
 
 //styles
@@ -25,7 +25,7 @@ function YourSupport(props) {
                     <Organization/>
                         </Tab>
                     <Tab activeKey={key} onSelect={(k) => setKey(k)} eventKey="human" title="فرد" style={{'width':' 65%'}}  className="mx-auto p-3">
-                        <TimeLine/>
+                       <Human/>
                      </Tab>
 
                 </Tabs>

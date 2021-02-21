@@ -1,1 +1,78 @@
-@import '../../../../design/index.scss'
+@import "../../../../design/index.scss";
+
+.header {
+    h3 {
+        color: $dark-gray;
+        font-size: 1.8rem;
+    }
+    p {
+        color: $light-gray;
+    }
+}
+.rightContent {
+    @extend %font-content;
+    h4 {
+        color: $dark-gray;
+        font-size: 1.2rem;
+        font-weight: 600;
+    }
+}
+.help-section {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    position: relative;
+    width: 287px;
+    height: 300px;
+    cursor: pointer;
+}
+.nocash-help-section {
+    @extend .help-section;
+    &:hover {
+        .svg-off-purple {
+            opacity: 0;
+        }
+        .svg-on-purple {
+            filter: drop-shadow(10px 10px 10px #ece0f7);
+            opacity: 1;
+          
+        }
+    }
+}
+.cash-help-section {
+    @extend .help-section;
+    &:hover {
+        .svg-off-blue {
+            opacity: 0;
+        }
+        .svg-on-blue {
+            opacity: 1;
+            filter: drop-shadow(10px 10px 10px #d9e7ff);
+        }
+    }
+}
+.svg {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    transition:all 0.3s linear;
+    height: 100%;
+}
+.svg-on-purple {
+    @extend .svg;
+    opacity: 0;
+}
+.svg-off-purple {
+    @extend .svg;
+    opacity: 1;
+}
+.svg-on-blue {
+    @extend .svg;
+    opacity: 0;
+}
+.svg-off-blue {
+    @extend .svg;
+    opacity: 1;
+}
