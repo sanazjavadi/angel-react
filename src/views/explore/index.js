@@ -1,5 +1,6 @@
 import React from 'react'
-import { useGlobalContext } from '../../state/context'
+// import { useGlobalContext } from '../../state/context'
+import {Dreams} from '../../constans/data'
 
 //components
 import Hero from '../../layouts/common/Hero'
@@ -13,7 +14,7 @@ import Styles from './styles/Explore.module.scss'
 
 function Explore(props) {
 
-  const { dreams } = useGlobalContext();
+  // const { dreams } = useGlobalContext();
   // const [size, setSize] = useState(9)
 
   // // add loader refrence 
@@ -61,12 +62,12 @@ function Explore(props) {
       <section className={Styles['section-margin']}>
         <div className="row justify-content-center">
           {
-            dreams.map((dream) => <div
+            Dreams.map((dream) => <div
               className="col-lg-4 col-md-6 col-sm-7 col-xs-9 col-11 d-flex  justify-content-center"
             >
 
               <ProductCart {...dream} key={dream.id}>
-
+                     {dream.dream}
               </ProductCart>
             </div>)
 

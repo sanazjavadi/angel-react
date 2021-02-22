@@ -30,8 +30,7 @@ function Footer(props) {
                   <div className="text-right">
                     <h4 className={`${styles['widget-title']}`} >درباره ما</h4>
                     <div className={`mb-4 ${styles['text']}`} >
-                      به مهربانی به مهربانی تلاشی دسته جمعی ست تا کودکان ایران
-                      به دلیل مشکلات اقتصادی از تحصیل بازنمانند
+                    کمپین فرشته یک تلاشی دسته جمعی ست تا به کودکان بی سرپرست برای رسیدن به آرزوهایشان کمک کند
                     </div>
                     <div className={styles.logo}>
                       <Logo height="50" width="50" />

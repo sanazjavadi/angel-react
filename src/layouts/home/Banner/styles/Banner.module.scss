@@ -11,6 +11,8 @@
       margin-top: 20px;
       -webkit-transition: all 0.2s linear;
       transition: all 0.2s linear;
+      animation:movingleft 100s linear;
+      animation-iteration-count: infinite;
       background-image: url('https://www.typingclub.com/m/tpmedia/img/clouds2.png');
       border-bottom: 10px solid white;
       top: 600px;
@@ -24,10 +26,24 @@
       -webkit-transition: all 0.2s linear;
       transition: all 0.2s linear;
       top: 600px;
+      animation:movingright 100s linear;
+      animation-iteration-count: infinite;
       background-image: url('https://www.typingclub.com/m/tpmedia/img/clouds3.png');
       @media (max-width: 680px) {
         top: 500px;
       }
+    }
+    @keyframes movingright {
+      0%   {background-position-x: 2086.75px;}
+      1%  {background-position-x: 2087.75px;}
+      2%  {background-position-x: 2088.75px;}
+      3% {background-position-x: 2089.75px;}
+    }
+    @keyframes movingleft {
+      0%   {background-position-x: -4173.5px;}
+      1%  {background-position-x: -4174.5px;}
+      2%  {background-position-x: -4175.5px;}
+      3% {background-position-x:-4176.5px;}
     }
     .clouds {
       position: absolute;

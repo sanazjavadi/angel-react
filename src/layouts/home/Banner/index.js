@@ -10,31 +10,19 @@ import Styles from "./styles/Banner.module.scss";
 
 function Banner(props) {
   const [status, setStatus] = useState(false)
-  const [ThirdCluodPosition, setThirdCluodPosition] = useState(2086.75);
-  const [SecondCloudPosition, setSecondCloudPosition] = useState(-4173.5);
-  useEffect(() => {
-    setInterval(() => {
-      setThirdCluodPosition((prev) => (prev += 2));
-      setSecondCloudPosition((prev) => (prev += 2));
-    }, 100);
-
-    return () => {
-      clearInterval();
-    };
-  }, []);
+ ;
 
   return (
     <section className={Styles["banner-section"]}>
       <div
         id={Styles.clouds3}
         className={Styles.clouds}
-        style={{ backgroundPositionX: ThirdCluodPosition + "px" }}
+       
       ></div>
       <div id={Styles.clouds1} className={Styles.clouds}></div>
       <div
         id={Styles.clouds2}
         className={Styles.clouds}
-        style={{ backgroundPositionX: SecondCloudPosition + "px" }}
       ></div>
       <div className={`row justify-content-center ${Styles['banner-title']}`}>
         <div className="col-lg-6 col-11 d-flex flex-column justify-content-center align-items-center">
