@@ -1,7 +1,7 @@
 import React from 'react'
 import { useGlobalContext } from '../../../state/context'
 import { Swiper, SwiperSlide } from 'swiper/react';
-import SwiperCore, { Navigation } from 'swiper';
+import SwiperCore, { Navigation, Autoplay } from 'swiper';
 import useWindowSize from '../../../service/hooks/useWindowSize'
 
 //components
@@ -16,7 +16,7 @@ import 'swiper/swiper.scss';
 function DreamSection(props) {
   const size = useWindowSize();
   const { dreams } = useGlobalContext()
-  SwiperCore.use([Navigation]);
+  SwiperCore.use([Navigation, Autoplay]);
 
 
   return (
@@ -32,6 +32,13 @@ function DreamSection(props) {
       <Container fluid className="mt-5">
         <Row className="justify-content-center">
           <Swiper
+            autoplay={{
+                    delay: 500,
+                    disableOnInteraction: false,
+                    reverseDirection: true,
+                    stopOnLastSlide: false,
+                    
+                }}
             spaceBetween={10}
             slidesPerView={size > 600 ? 3 : 1}
             style={{ marginRight: '30px' }}
