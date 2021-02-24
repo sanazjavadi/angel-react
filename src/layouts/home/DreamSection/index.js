@@ -3,6 +3,7 @@ import { useGlobalContext } from '../../../state/context'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Autoplay } from 'swiper';
 import useWindowSize from '../../../service/hooks/useWindowSize'
+import {Link} from 'react-router-dom'
 
 //components
 import ProductCart from '../../../components/Product'
@@ -33,23 +34,23 @@ function DreamSection(props) {
         <Row className="justify-content-center">
           <Swiper
             autoplay={{
-                  delay:0,
-                    disableOnInteraction: false,
-                    reverseDirection: false,
-                    stopOnLastSlide: false,
-                    waitForTransition:true,
-speed:600
-                    
-                }}
-                data-swiper-autoplay="5000"
+              delay: 0,
+              disableOnInteraction: false,
+              reverseDirection: false,
+              stopOnLastSlide: false,
+              waitForTransition: true,
+              speed: 6000
+
+            }}
+            data-swiper-autoplay="5000"
             spaceBetween={10}
             slidesPerView={size > 600 ? 3 : 1}
-            style={{ marginRight: '30px',  transitionTimingFunction:'lineaer', transitionDelay:'0', transitionDuration:'5000ms'}}
-         
+            style={{ marginRight: '30px', transitionTimingFunction: 'lineaer', transitionDelay: '0', transitionDuration: '5000ms' }}
+
           >
             {
               dreams.map(product =>
-                <SwiperSlide style={{ transitionTimingFunction:'lineaer', transitionDelay:'0', transitionDuration:'5000ms'}}>
+                <SwiperSlide style={{ transitionTimingFunction: 'lineaer', transitionDelay: '0', transitionDuration: '5000ms' }}>
 
                   <ProductCart {...product} key={product.id}>
                     {product.dream}
@@ -69,19 +70,19 @@ speed:600
       <Container fluid className="mt-5">
         <Row className="justify-content-center">
           <Swiper
-          data-swiper-autoplay="5000"
+            data-swiper-autoplay="5000"
             autoplay={{
-                    delay:0,
-                    speed:600,
-                    disableOnInteraction: false,
-                    reverseDirection:true,
-                    stopOnLastSlide: false,
-                    waitForTransition:true
-                }}
+              delay: 0,
+              speed: 6000,
+              disableOnInteraction: false,
+              reverseDirection: true,
+              stopOnLastSlide: false,
+              waitForTransition: true
+            }}
             spaceBetween={10}
             slidesPerView={size > 600 ? 3 : 1}
             style={{ marginRight: '30px' }}
-         
+
           >
             {
               dreams.map(product =>
@@ -102,6 +103,10 @@ speed:600
 
         </Row>
       </Container>
+      <div className="text-center w-100 mt-4"> 
+      <Link to="/explore" className={Styles.more}>موارد بیشتر</Link>
+      </div>
+     
     </section>
   )
 }

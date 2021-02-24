@@ -13,3 +13,12 @@
     cursor: pointer;
   }
 }
+.more{
+  font-size: 1.1rem;
+  color:$dark-blue;
+  font-weight: 700;
+  transition: color .1s linear;
+  &:hover{
+    color:lighten($dark-blue, 20px);
+  }
+}
