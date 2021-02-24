@@ -18,7 +18,7 @@ import {
     from '../constans/actionTypes';
 
 const initialState = {
-    dreams: Dreams,
+    dreams: [],
     loading: false
 }
 

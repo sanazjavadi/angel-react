@@ -1,6 +1,6 @@
-import React from 'react'
-// import { useGlobalContext } from '../../state/context'
-import {Dreams} from '../../constans/data'
+import React, {useEffect, useState, useRef} from 'react'
+import { useGlobalContext } from '../../state/context'
+// import {Dreams} from '../../constans/data'
 
 //components
 import Hero from '../../layouts/common/Hero'
@@ -14,40 +14,41 @@ import Styles from './styles/Explore.module.scss'
 
 function Explore(props) {
 
-  // const { dreams } = useGlobalContext();
-  // const [size, setSize] = useState(9)
+  const { dreams, fetchDreams } = useGlobalContext();
+  const [dreamLists, setDreamLists] = useState([])
+  const [size, setSize] = useState(9)
+  const [page, setPage] = useState(0)
+  // add loader refrence 
+  const loader = useRef(null);
 
-  // // add loader refrence 
-  // const loader = useRef(null);
+  useEffect(() => {
+    var options = {
+      root: null,
+      rootMargin: "20px",
+      threshold: 1.0
+    };
+    // initialize IntersectionObserver
+    // and attaching to Load More div
+    const observer = new IntersectionObserver(handleObserver, options);
+    if (loader.current) {
+      observer.observe(loader.current)
+    }
 
-  // useEffect(() => {
-  //   var options = {
-  //     root: null,
-  //     rootMargin: "20px",
-  //     threshold: 1.0
-  //   };
-  //   // initialize IntersectionObserver
-  //   // and attaching to Load More div
-  //   const observer = new IntersectionObserver(handleObserver, options);
-  //   if (loader.current) {
-  //     observer.observe(loader.current)
-  //     console.log(observer.observe(loader.current))
-  //   }
+  }, []);
 
-  // }, []);
-
-  // useEffect(() => {
-  //   fetchDreams(0, size)
-  // }, [size])
-  // // here we handle what happens when user scrolls to Load More div
-  // // in this case we just update page variable
-  // const handleObserver = (entities) => {
-  //   const target = entities[0];
-  //   if (target.isIntersecting) {
-  //     setSize((previd) => previd + 9)
-  //     console.log(size)
-  //   }
-  // }
+  useEffect(() => {
+    fetchDreams(page, size)
+    setDreamLists([...dreamLists, ...dreams])
+  }, [size, page])
+  // here we handle what happens when user scrolls to Load More div
+  // in this case we just update page variable
+  const handleObserver = (entities) => {
+    const target = entities[0];
+    if (target.isIntersecting) {
+      setSize((prevState) => prevState + 9)
+      setPage((prevState) => prevState + 1)
+    }
+  }
 
   return (
     <div className="container-fluid">
@@ -62,7 +63,7 @@ function Explore(props) {
       <section className={Styles['section-margin']}>
         <div className="row justify-content-center">
           {
-            Dreams.map((dream) => <div
+            dreamLists.map((dream) => <div
               className="col-lg-4 col-md-6 col-sm-7 col-xs-9 col-11 d-flex  justify-content-center"
             >
 
@@ -72,9 +73,9 @@ function Explore(props) {
             </div>)
 
           }
-          {/* <div className="loading" ref={loader}>
+          <div className="loading" ref={loader}>
             <h2>Load More</h2>
-          </div> */}
+          </div>
         </div>
       </section>
     </div>
