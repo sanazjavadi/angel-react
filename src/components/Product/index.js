@@ -5,13 +5,13 @@ import { Link } from "react-router-dom";
 import Modal from '../Modal'
 import PayProduct from '../../layouts/PayProduct'
 import Progress from '../../components/progress'
+import Button from '../Button'
 
 //styles
 import Styles from './styles/Product.module.scss'
 
 //assets
 import QuoteIcon from '../../svg/RightQuotationMark'
-import GIftBoxIcon from '../../svg/GiftBox'
 
 function DreamCart(props) {
    const { name, image, children} = props
@@ -46,8 +46,10 @@ function DreamCart(props) {
             <Link to="/"> آرزوی {name} کوچولو</Link>
           </h4>
         </div>
-
-        <GIftBoxIcon className={Styles.giftbox} onClick={openPayModal}/>
+   <Button theme="minimalBtn" handleClick={openPayModal} size="sm">
+     حمایت میکنم
+   </Button>
+       
 
       </div>
     </div>

@@ -7,16 +7,17 @@ function Progress({ percantage, allprice, payPrice }) {
 
   return (
     <div className={`d-flex align-items-center justify-content-between ${styles['progress-wrapper']}`}>
+         <div className={styles.progress}>
+
+<div className={styles['progress-done']} data-done="60" style={{ 'width': percantage }}>
+
+</div>
+</div>
       <div className={styles.price}>
-      <span className={styles.pay}>{payPrice}/{allprice}</span>    <span className="mr-3">{percantage}</span> 
+     <span className="ml-3">{percantage}</span>      <span className={styles.pay}>حمایت شده</span> 
       </div>
  
-      <div className={styles.progress}>
-
-        <div className={styles['progress-done']} data-done="60" style={{ 'width': percantage }}>
-
-        </div>
-      </div>
+   
     </div>
   )
 }

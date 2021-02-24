@@ -39,6 +39,22 @@
     background-color: inherit;
   
   }
+  .minimalBtn{
+    color:darken($light-blue, 5px);
+    font-weight: 600;
+    border-radius: 10px;
+    border:none;
+    background-color:rgb(255, 255, 255);
+    transition:all 0.1s linear;
+    &:hover{
+      background-color: whitesmoke;
+     
+    }
+  }
+  .btn-sm{
+    font-size: 12px;
+    padding:4px 8px;
+  }
   .btn-lg {
     @extend .btn;
     padding: 0 1.5rem;
