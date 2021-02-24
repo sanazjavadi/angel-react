@@ -1,7 +1,7 @@
 import React from 'react'
 import { useGlobalContext } from '../../../state/context'
 import { Swiper, SwiperSlide } from 'swiper/react';
-import SwiperCore, { Navigation, Autoplay } from 'swiper';
+import SwiperCore, { Autoplay } from 'swiper';
 import useWindowSize from '../../../service/hooks/useWindowSize'
 
 //components
@@ -16,7 +16,7 @@ import 'swiper/swiper.scss';
 function DreamSection(props) {
   const size = useWindowSize();
   const { dreams } = useGlobalContext()
-  SwiperCore.use([Navigation, Autoplay]);
+  SwiperCore.use([Autoplay]);
 
 
   return (
@@ -33,20 +33,59 @@ function DreamSection(props) {
         <Row className="justify-content-center">
           <Swiper
             autoplay={{
-                    delay: 500,
+                  delay:0,
                     disableOnInteraction: false,
-                    reverseDirection: true,
+                    reverseDirection: false,
                     stopOnLastSlide: false,
+                    waitForTransition:true,
+speed:600
                     
+                }}
+                data-swiper-autoplay="5000"
+            spaceBetween={10}
+            slidesPerView={size > 600 ? 3 : 1}
+            style={{ marginRight: '30px',  transitionTimingFunction:'lineaer', transitionDelay:'0', transitionDuration:'5000ms'}}
+         
+          >
+            {
+              dreams.map(product =>
+                <SwiperSlide style={{ transitionTimingFunction:'lineaer', transitionDelay:'0', transitionDuration:'5000ms'}}>
+
+                  <ProductCart {...product} key={product.id}>
+                    {product.dream}
+                  </ProductCart>
+
+                </SwiperSlide>
+
+
+              )
+            }
+      ...
+    </Swiper>
+
+
+        </Row>
+      </Container>
+      <Container fluid className="mt-5">
+        <Row className="justify-content-center">
+          <Swiper
+          data-swiper-autoplay="5000"
+            autoplay={{
+                    delay:0,
+                    speed:600,
+                    disableOnInteraction: false,
+                    reverseDirection:true,
+                    stopOnLastSlide: false,
+                    waitForTransition:true
                 }}
             spaceBetween={10}
             slidesPerView={size > 600 ? 3 : 1}
             style={{ marginRight: '30px' }}
-            navigation 
+         
           >
             {
               dreams.map(product =>
-                <SwiperSlide>
+                <SwiperSlide >
 
                   <ProductCart {...product} key={product.id}>
                     {product.dream}
