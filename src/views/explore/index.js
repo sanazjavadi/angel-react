@@ -10,6 +10,8 @@ import Input from '../../components/Input'
 //styles
 import Styles from './styles/Explore.module.scss'
 
+//assets
+import Loading from '../../svg/Loading'
 
 
 function Explore(props) {
@@ -74,7 +76,7 @@ function Explore(props) {
 
           }
           <div className="loading" ref={loader}>
-            <h2>Load More</h2>
+           <Loading/>
           </div>
         </div>
       </section>
