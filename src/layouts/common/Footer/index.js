@@ -78,17 +78,17 @@ function Footer(props) {
           <ul className={styles['social-icon-two']}>
             <li className="ml-3">
               <Link to="#">
-                <Twiiter width="40" height="40" />
+                <Twiiter width="25" height="25" />
               </Link>
             </li>
             <li className="ml-3">
               <Link to="/">
-                <Youtube width="40" height="40" />
+                <Youtube width="25" height="25" />
               </Link>
             </li>
             <li >
               <Link to="/" >
-                <Instagram width="35" height="35" />
+                <Instagram width="20" height="20" />
               </Link>
             </li>
           </ul>

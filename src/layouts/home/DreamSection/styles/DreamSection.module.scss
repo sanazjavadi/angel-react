@@ -15,9 +15,11 @@
 }
 .more{
   font-size: 1.1rem;
-  color:$dark-blue;
+  
   font-weight: 700;
-  transition: color .1s linear;
+ a{
+  color:darken($light-blue, 25px) !important;
+ }
   &:hover{
     color:lighten($dark-blue, 20px);
   }

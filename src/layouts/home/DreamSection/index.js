@@ -1,9 +1,9 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react'
 import { useGlobalContext } from '../../../state/context'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Autoplay } from 'swiper';
 import useWindowSize from '../../../service/hooks/useWindowSize'
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 //components
 import ProductCart from '../../../components/Product'
@@ -18,8 +18,21 @@ function DreamSection(props) {
   const size = useWindowSize();
   const { dreams } = useGlobalContext()
   SwiperCore.use([Autoplay]);
-
-
+  const [priview, setpriview] = useState(3)
+  useEffect(()=> silderPriview (), [priview] )
+  const silderPriview = ()=> {
+    if(size> 800) {
+     setpriview(  prevState => 3)
+    }
+    else if(size>600 && size < 800) {
+      setpriview( prevState => 2)
+    }
+    else if(size <600) {
+      setpriview(  prevState => 1)
+    }
+  }
+  console.log(priview)
+console.log(size)
   return (
     <section className={Styles['sec-dream']}>
       <Row className="justify-content-center">
@@ -35,16 +48,14 @@ function DreamSection(props) {
           <Swiper
             autoplay={{
               delay: 0,
-              disableOnInteraction: false,
-              reverseDirection: false,
+              disableOnInteraction: true,
               stopOnLastSlide: false,
               waitForTransition: true,
-              speed: 6000
 
             }}
             data-swiper-autoplay="5000"
             spaceBetween={10}
-            slidesPerView={size > 600 ? 3 : 1}
+            slidesPerView={priview}
             style={{ marginRight: '30px', transitionTimingFunction: 'lineaer', transitionDelay: '0', transitionDuration: '5000ms' }}
 
           >
@@ -73,14 +84,13 @@ function DreamSection(props) {
             data-swiper-autoplay="5000"
             autoplay={{
               delay: 0,
-              speed: 6000,
-              disableOnInteraction: false,
+              disableOnInteraction: true,
               reverseDirection: true,
               stopOnLastSlide: false,
               waitForTransition: true
             }}
             spaceBetween={10}
-            slidesPerView={size > 600 ? 3 : 1}
+            s slidesPerView={priview}
             style={{ marginRight: '30px' }}
 
           >
@@ -93,8 +103,6 @@ function DreamSection(props) {
                   </ProductCart>
 
                 </SwiperSlide>
-
-
               )
             }
       ...
@@ -103,10 +111,10 @@ function DreamSection(props) {
 
         </Row>
       </Container>
-      <div className="text-center w-100 mt-4"> 
-      <Link to="/explore" className={Styles.more}>موارد بیشتر</Link>
+      <div className={`text-center w-100 mt-4 ${Styles.more}`}>
+        <Link to="/explore">موارد بیشتر</Link>
       </div>
-     
+
     </section>
   )
 }
