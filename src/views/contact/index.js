@@ -9,6 +9,7 @@ import TextArea from '../../components/TextArea'
 
 //styles
 import Styles from "./styles/Contact.module.scss";
+import {Container, Row, Col} from 'react-bootstrap'
 
 //assets
 import Call from '../../svg/Call'
@@ -22,12 +23,12 @@ function Contact(props) {
 
       <section className={Styles["section-margin"]}>
 
-        <div className="container-fluid">
-          <div className="row justify-content-center ">
-            <div
-              className={`${Styles["contact-form"]} col-lg-6 col-md-8 col-sm-11 col-12 d-flex flex-column align-items-center`}
+        <Container fluid>
+          <Row className="justify-content-center ">
+            <Col lg={6} md={6} sm={11} xs={12}
+              className={`${Styles["contact-form"]}  d-flex flex-column align-items-center`}
             >
-              <h2 className="text-center">ارسال پیام از طریق فرم</h2>
+              <h4 className="text-right mb-lg-4 mb-3 pb-0">ارسال پیام از طریق فرم</h4>
               <Formik
                 initialValues={{ name: '', email: '', subject: '', msg: '' }}
                 validate={values => {
@@ -99,9 +100,10 @@ function Contact(props) {
                 )}
               </Formik>
 
-            </div>
-            <div
-              className={`${Styles.address} col-lg-6 col-md-6 col-10 mt-5 mt-lg-0 d-flex flex-column justify-content-center`}
+            </Col>
+            <Col
+            lg={6} md={6} xs={10}
+              className={`${Styles.address} d-flex flex-column justify-content-center mt-5 mt-sm-0`}
             >
               <div className="d-flex  align-items-center">
             
@@ -131,9 +133,9 @@ function Contact(props) {
               <p className="font-weight-bolder">
                 <a href="mailto:info@angell.com">info@angell.com</a>
               </p>
-            </div>
-          </div>
-        </div>
+            </Col>
+          </Row>
+        </Container>
       </section>
     </div>
   );

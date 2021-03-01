@@ -17,12 +17,18 @@
     }
   }
   .contact-form {
-    h2 {
+    h4 {
       @extend %font-heading;
       color: $dark-blue;
+      @media(max-width:991px){
+       font-size: 1.5rem;
+      }
     }
     .contact-base-form {
       width: 80%;
+      @media(max-width:991px){
+        width: 100%;
+      }
     }
   }
   .address {

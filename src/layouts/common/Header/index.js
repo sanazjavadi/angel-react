@@ -59,15 +59,13 @@ function Header(props) {
         <MobileMenu />
       ) : (
         <>
-          <Row className="justify-content-center pt-3 pb-3">
-            <Col lg={4} sm="2">
-            </Col>
-            <Col lg={4} sm={7} className="d-flex justify-content-center">
+          <Row className="justify-content-end  pt-3 pb-3">
+         
+            <Col lg={{ span: 4, offset: 1 }} sm={6} className="d-flex justify-content-center">
               <Logo height="100" width="100" />
             </Col>
-            <Col lg={1} sm="auto">
-            </Col>
-            <Col lg={3} sm="auto" className="d-flex justify-content-center">
+           
+            <Col lg={3} sm={3} className="d-flex justify-content-center">
             <Profile/>
             </Col>
           </Row>
