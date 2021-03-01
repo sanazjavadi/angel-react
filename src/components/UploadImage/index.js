@@ -1,4 +1,5 @@
 import React from 'react'
+import Dropzone from "react-dropzone";
 
 //styles
 import styles from './styles/uploadImage.module.scss'
@@ -6,62 +7,34 @@ import styles from './styles/uploadImage.module.scss'
 //assets
 import UploadSvg from '../../svg/Upload'
 
-class UploadImage extends React.Component {
-    state = {
-        loading: false,
-        thumb: undefined,
-    };
+const UploadImage = ({ file }) => {
+ const handleDrop= () => {
+     
+ }
 
-    componentWillReceiveProps(nextProps) {
-        if (!nextProps.file) { return; }
+    return (
 
-        this.setState({ loading: true }, () => {
-            let reader = new FileReader();
+        <Dropzone multiple={true}
+            accept="image/*" onDrop={handleDrop}>
+            {({ getRootProps, getInputProps }) => (
 
-            reader.onloadend = () => {
-                this.setState({ loading: false, thumb: reader.result });
-            };
-
-            reader.readAsDataURL(nextProps.file);
-        });
-    }
-
-    render() {
-        const { file } = this.props;
-        const { loading, thumb } = this.state;
-
-      
-
-        if (loading) { return <p>loading...</p>; }
-
-        return (
-            <>
-
-                <label htmlFor={this.props.id} className={styles.uploadArea}>
+                <div {...getRootProps({ className: `${styles.uploadArea} dropzone` })}>
 
                     <UploadSvg heigth="40" width="40" />
-                    {
-                        thumb ? <img src={thumb}
-                            alt={file.name}
-                            className={styles.thumbImage}
-                             />
-                            :
+                  
                             <div className="mt-3">drag and drops your files or  browse</div>
-                    }
+                    
 
+                    <input
+                        {...getInputProps()}
+                    />
 
-                </label>
-                <input
-                    name={this.props.name}
-                    type={this.props.type}
-                    id={this.props.id}
-                    style={{ display: "none" }}
-                    onChange={this.props.handleChange} />
-            </>
+                </div>
 
+            )}
+        </Dropzone>
+    );
 
-        );
-    }
 }
 
 

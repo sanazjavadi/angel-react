@@ -15,7 +15,6 @@ import { Tabs, Tab } from 'react-bootstrap'
 
 function YourSupport(props) {
     const size = useWindowSize()
-    console.log(size)
     const [key, setKey] = useState('human')
     return (
         <div className="container-fluid">

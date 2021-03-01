@@ -9,6 +9,7 @@ import Input from '../../components/Input'
 
 //styles
 import Styles from './styles/Explore.module.scss'
+import {Container, Row, Col} from 'react-bootstrap'
 
 //assets
 import Loading from '../../svg/Loading'
@@ -53,7 +54,7 @@ function Explore(props) {
   }
 
   return (
-    <div className="container-fluid">
+    <Container fluid>
       <Hero>
         گشت و گذار
         <div className="w-25 mx-auto">
@@ -63,24 +64,25 @@ function Explore(props) {
       </Hero>
 
       <section className={Styles['section-margin']}>
-        <div className="row justify-content-center">
+        <Row className="justify-content-center">
           {
-            dreamLists.map((dream) => <div
-              className="col-lg-4 col-md-6 col-sm-7 col-xs-9 col-11 d-flex  justify-content-center"
+            dreamLists.map((dream) => <Col
+            lg={4} md={6} sm={9} xs={12}
+              className="d-flex justify-content-center"
             >
 
               <ProductCart {...dream} key={dream.id}>
                      {dream.dream}
               </ProductCart>
-            </div>)
+            </Col>)
 
           }
           <div className="loading" ref={loader}>
            <Loading/>
           </div>
-        </div>
+        </Row>
       </section>
-    </div>
+    </Container>
   )
 }
 

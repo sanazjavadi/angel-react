@@ -3,6 +3,7 @@ import React from "react";
 //styles
 import Styles from "./Styles/Input.module.scss";
 
+
 function Index(props) {
     const {
         type,

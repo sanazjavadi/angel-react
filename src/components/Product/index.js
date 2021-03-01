@@ -41,7 +41,7 @@ function DreamCart(props) {
               alt=""
             />
           </div>
-          <h4 className="pr-2">
+          <h4 className="pr-2 pb-0 mb-0">
 
             <Link to="/"> آرزوی {name} کوچولو</Link>
           </h4>

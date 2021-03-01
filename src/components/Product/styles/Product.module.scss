@@ -37,6 +37,10 @@
       border-radius: 50%;
       overflow: hidden;
       border: 3px solid white;
+      @media(max-width:400px){
+        width: 40px;
+        height: 40px;
+      }
       img {
         object-fit: cover;
         max-width: 100%;
@@ -50,6 +54,10 @@
         line-height: 2.4em;
         color: white;
         font-weight: 700;
+        text-align: right;
+        @media(max-width:400px){
+          font-size: 12px;
+        }
       }
     }
   }
