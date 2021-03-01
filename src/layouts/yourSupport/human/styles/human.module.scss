@@ -4,6 +4,12 @@
     h3 {
         color: $dark-blue;
         font-size: 1.8rem;
+        @media(max-width:1200px){
+            font-size: 1.4rem;
+        }
+        @media(max-width:600px){
+            font-size: 1.2rem;
+        }
     }
     p {
         color: $light-gray;
@@ -15,9 +21,18 @@
         color: $dark-blue;
         font-size: 1.2rem;
         font-weight: 600;
+        @media(max-width:1200px){
+            font-size: 1.1rem;
+        }
+        @media(max-width:600px){
+            font-size: 1rem;
+        }
     }
     p {
         color: $dark-gray;
+        @media(max-width:600px){
+            font-size: 12px;
+        }
     }
 }
 .help-section {
@@ -30,6 +45,10 @@
     width: 287px;
     height: 300px;
     cursor: pointer;
+    @media(max-width:455px){
+        width: 250px;
+        height: 250px;
+    }
 }
 .nocash-help-section {
     @extend .help-section;

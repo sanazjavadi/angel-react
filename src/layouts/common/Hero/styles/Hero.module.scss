@@ -4,7 +4,7 @@
     margin-top: 4rem;
     @extend %font-heading;
     color: $dark-blue;
-    @media (max-width: 991px) {
+    @media (max-width: 920px) {
       margin-top: 10rem;
     }
   }
@@ -14,7 +14,7 @@
     height: 120px;
     left: 0px;
     top: 400px;
-    @media (max-width: 991px) {
+    @media (max-width: 920px) {
       top: 300px;
     }
   }
@@ -31,7 +31,8 @@
     background-image: url('https://www.typingclub.com/m/tpmedia/img/clouds2.png');
     border-bottom: 10px solid white;
     top: 400px;
-    @media (max-width: 991px) {
+    @media (max-width: 920px) {
       top: 300px;
     }
+ 
   }

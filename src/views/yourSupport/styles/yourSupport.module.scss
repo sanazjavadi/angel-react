@@ -3,10 +3,19 @@
 
 .section-margin{
     margin-top:300px;
+    @media(max-width:900px){
+        margin-top: 200px;
+    }
     .custom-tab{
         width: 65%;
         margin: auto;
         display: flex;
+        @media(max-width: 760px){
+            width: 100%;
+        }
+        @media(max-width: 420px){
+            width: 100%;
+        }
         a{
             width: 50%;
             text-align: center;
@@ -19,7 +28,12 @@
             &:last-child{
                 border-right: 2px solid $light-blue;
             }
-          
+          @media(max-width: 991px){
+              font-size: 1.4rem;
+          }
+          @media(max-width: 420px){
+            font-size: 1rem;
+        }
         }
        
     }
