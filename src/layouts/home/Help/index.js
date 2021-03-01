@@ -16,12 +16,12 @@ function Help(props) {
         <Container>
           <Row className="align-items-stretch">
             <Col xs={12} className="d-flex justify-content-center">
-              <img
-                src="https://opencollective.com/static/images/home/weareopen-illustration-md.png"
-                alt=""
-                className="img-fluid mb-4"
-                width="200"
-              />
+              <div className={Styles.questionImg}>
+              <img srcset="https://opencollective.com/static/images/home/weareopen-illustration-md.png" className="img-fluid" alt="" />
+              </div>
+    
+  
+             
             </Col>
           </Row>
     
