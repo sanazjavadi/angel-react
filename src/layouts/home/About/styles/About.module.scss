@@ -1,8 +1,8 @@
 @import '../../../../design/index.scss';
 
 .section-margin {
-    margin-top: 330px;
-    @media (max-width: 768px) {
+    margin-top: 300px;
+    @media (max-width: 920px) {
       margin-top: 250px;
     }
     .description {
@@ -17,10 +17,5 @@
         @extend %font-content;
       }
     }
-    .img-desc {
-      border-radius: 5px;
-      width: 100%;
-      margin: auto;
-    
-    }
+  
   }

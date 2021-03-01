@@ -11,6 +11,9 @@
       background-position:50% 40px;
       
     }
+    @media(max-width:991px){
+      padding:2rem 0;
+    }
     .title {
       @extend %font-heading;
       color: $dark-blue;
@@ -32,7 +35,10 @@
       color: $dark-blue;
       font-size: 1.4rem;
       font-weight: 700;
-     
+      @media(max-width:768px){
+        font-size: 1rem;
+        
+      }
     }
     .support-text {
       @extend %font-content;

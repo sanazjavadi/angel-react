@@ -3,33 +3,27 @@
 .banner-section {
     #clouds1 {
       margin-top: -14px;
-      -webkit-transition: all 0.2s linear;
-      transition: all 0.2s linear;
       background-image: url('https://www.typingclub.com/m/tpmedia/img/clouds1.png');
     }
     #clouds2 {
       margin-top: 20px;
-      -webkit-transition: all 0.2s linear;
-      transition: all 0.2s linear;
       animation:movingleft 100s linear;
       animation-iteration-count: infinite;
       background-image: url('https://www.typingclub.com/m/tpmedia/img/clouds2.png');
       border-bottom: 10px solid white;
       top: 600px;
-      @media (max-width: 680px) {
+      @media (max-width: 920px) {
         top: 500px;
       }
     }
     #clouds3 {
       margin-top: -30px;
       background-position-x: -140px;
-      -webkit-transition: all 0.2s linear;
-      transition: all 0.2s linear;
       top: 600px;
       animation:movingright 100s linear;
       animation-iteration-count: infinite;
       background-image: url('https://www.typingclub.com/m/tpmedia/img/clouds3.png');
-      @media (max-width: 680px) {
+      @media (max-width: 920px) {
         top: 500px;
       }
     }
@@ -51,7 +45,7 @@
       height: 120px;
       left: 0px;
       top: 600px;
-      @media (max-width: 680px) {
+      @media (max-width:920px) {
         top: 500px;
       }
     }
@@ -62,7 +56,7 @@
       color: $header-color;
     }
     .banner-title {
-      @media (max-width: 500px) {
+      @media (max-width: 920px) {
         margin-top: 9rem;
       }
       span {

@@ -3,6 +3,9 @@
 
 .sec-dream {
     padding: $section-padding-lg;
+    @media(max-width:991px){
+      padding:$section-padding-sm;
+    }
   }
   .sec-title h2 {
     @extend %font-heading;

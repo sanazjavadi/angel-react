@@ -24,14 +24,14 @@ function About(props) {
             >
           </div>
         </div>
-        <div className="col-lg-6 col-md-12 col-11">
-          <div className={`${Styles['img-desc']} d-flex justify-content-center`}>
+        <div className="col-lg-6 col-md-8 col-11 mt-4 mt-lg-0">
+    
             <img
               src="https://opencollective.com/static/images/home/makecommunity-section-illustration.png"
               className="img-fluid"
               alt=""
             />
-          </div>
+          
         </div>
       
       </div>
