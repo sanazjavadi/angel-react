@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { NavLink, useLocation } from "react-router-dom";
+import { NavLink, useLocation, Link } from "react-router-dom";
 
 //components
 import MobileMenu from "../MobileMenu/";
@@ -62,7 +62,10 @@ function Header(props) {
           <Row className="justify-content-end  pt-3 pb-3">
          
             <Col lg={{ span: 4, offset: 1 }} sm={6} className="d-flex justify-content-center">
+              <Link to="/">
               <Logo height="100" width="100" />
+              </Link>
+              
             </Col>
            
             <Col lg={3} sm={3} className="d-flex justify-content-center">
@@ -75,7 +78,10 @@ function Header(props) {
                 {scrolled && (
                   <>
                   <li className={Styles["minimize-icon"]}>
+                    <Link to="/">
                     <Logo width="40" height="40" />
+                    </Link>
+                    
                   </li>
                   <li className={Styles.profile}>
                      <Profile/>
