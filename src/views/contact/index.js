@@ -17,7 +17,6 @@ import Email from '../../svg/Email'
 import Location from '../../svg/Location'
 
 function Contact(props) {
-
   return (
     <div className="container-fluid">
       <Hero>تماس با ما</Hero>

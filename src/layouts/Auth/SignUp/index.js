@@ -1,6 +1,7 @@
 import { Formik } from 'formik';
 import { useGlobalContext } from '../../../state/context'
 
+
 //components
 import Input from "../../../components/Input";
 import Button from "../../../components/Button";
@@ -42,8 +43,9 @@ function Index({ changeHandler }) {
                   setTimeout(() => {
                     signUp(values)
                     setSubmitting(false);
+                
                   }, 400);
-
+          
                 }}
               >
                 {({

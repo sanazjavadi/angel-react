@@ -1,8 +1,7 @@
 import React, { createContext, useContext, useReducer } from 'react';
-import { Dreams } from '../constans/data'
 import reducer from './reducer'
 import axios from 'axios'
-import { instance } from '../service/api'
+import { instance, USER_TOKEN } from '../service/api'
 import {
     FETCH_DREAMS_REQUEST,
     FETCH_DREAMS_REGECTE,
@@ -19,7 +18,8 @@ import {
 
 const initialState = {
     dreams: [],
-    loading: false
+    loading: false,
+    user:USER_TOKEN
 }
 
 const AppContext = createContext(initialState)
@@ -27,7 +27,6 @@ const AppContext = createContext(initialState)
 const ProviderContext = ({ children }) => {
 
     const [state, dispatch] = useReducer(reducer, initialState);
-
     const fetchDreams = ({ page = 0, size = 9 }) => {
         dispatch({ type: FETCH_DREAMS_REQUEST })
 
@@ -75,7 +74,7 @@ const ProviderContext = ({ children }) => {
     }
     return (
 
-        <AppContext.Provider value={{ dreams: state.dreams, fetchDreams, signUp, logIn, logOut }}>
+        <AppContext.Provider value={{ dreams: state.dreams, fetchDreams, signUp, logIn, logOut, user: state.user }}>
             {children}
         </AppContext.Provider>
     )

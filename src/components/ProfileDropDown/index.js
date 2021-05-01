@@ -9,11 +9,10 @@ import styles from './styles/profile.module.scss'
 import ArrowDown from '../../svg/DownArrow'
 import ArrowUp from '../../svg/UpArrow'
 
-function Profile(props) {
+function Profile({user}) {
     
     const {logOut } = useGlobalContext()
     const [isOpen, setIsOpen] = useState(false)
-
     return (
         <div className={styles.profile} onClick={() => setIsOpen(!isOpen)}>
             <div className={styles.account}>
@@ -30,11 +29,11 @@ function Profile(props) {
 
             <ul className={styles.drop} style={isOpen ? { 'display': 'block' } : { 'display': 'none' }}>
                 <li className="pt-4">
-                    sanaz javadi
+                    {user.name}
                     </li>
 
                 <li className="pb-2 ">
-                    sanaz.jvd72@gmai.com
+                    s{user.email}
                         </li>
                 <li className="py-2">
                     <Link to="/profile">

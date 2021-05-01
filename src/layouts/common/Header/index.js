@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { NavLink, useLocation, Link } from "react-router-dom";
+import { useGlobalContext } from '../../../state/context'
 
 //components
 import MobileMenu from "../MobileMenu/";
@@ -17,7 +18,7 @@ import Logo from "../../../svg/Logo";
 
 function Header(props) {
   const location = useLocation();
-
+  const { user } = useGlobalContext()
   const [scrolled, setscrolled] = useState(false);
   const [mobileMenu, setMobileMenu] = useState(false);
 
@@ -38,7 +39,7 @@ function Header(props) {
   };
 
   useEffect(() => {
-    
+
     window.addEventListener("scroll", handleScroll);
     return () => {
       window.removeEventListener("scroll", handleScroll);
@@ -53,23 +54,28 @@ function Header(props) {
     };
   }, []);
 
+
   return (
+
     <>
       {mobileMenu ? (
         <MobileMenu />
       ) : (
         <>
           <Row className="justify-content-end  pt-3 pb-3">
-         
+
             <Col lg={{ span: 4, offset: 1 }} sm={6} className="d-flex justify-content-center">
               <Link to="/">
-              <Logo height="100" width="100" />
+                <Logo height="100" width="100" />
               </Link>
-              
+
             </Col>
-           
+
             <Col lg={3} sm={3} className="d-flex justify-content-center">
-            <Profile/>
+              {
+                user && <Profile user={user}/>
+              }
+
             </Col>
           </Row>
           <Row className="justify-content-center mt-2">
@@ -77,15 +83,18 @@ function Header(props) {
               <ul className={`${scrolled && Styles.scrolled} ${Styles.header}`}>
                 {scrolled && (
                   <>
-                  <li className={Styles["minimize-icon"]}>
-                    <Link to="/">
-                    <Logo width="40" height="40" />
-                    </Link>
-                    
-                  </li>
-                  <li className={Styles.profile}>
-                     <Profile/>
-                  </li>
+                    <li className={Styles["minimize-icon"]}>
+                      <Link to="/">
+                        <Logo width="40" height="40" />
+                      </Link>
+
+                    </li>
+
+                    <li className={Styles.profile}>
+                      {user && <Profile user={user}/>
+                      }
+
+                    </li>
                   </>
                 )}
 
