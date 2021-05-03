@@ -24,7 +24,7 @@ function Explore(props) {
   // add loader refrence 
   const loader = useRef(null);
 
-  useEffect(() => {
+  useEffect(() => {    
     var options = {
       root: null,
       rootMargin: "20px",
@@ -40,8 +40,8 @@ function Explore(props) {
   }, []);
 
   useEffect(() => {
-    fetchDreams(page, size)
-    setDreamLists([...dreamLists, ...dreams])
+    // fetchDreams()
+    // setDreamLists([...dreamLists, ...dreams])
   }, [size, page])
   // here we handle what happens when user scrolls to Load More div
   // in this case we just update page variable
@@ -66,7 +66,7 @@ function Explore(props) {
       <section className={Styles['section-margin']}>
         <Row className="justify-content-center">
           {
-            dreamLists.map((dream) => <Col
+            dreams.length>0 && dreams.map((dream) => <Col
             lg={4} md={6} sm={9} xs={12}
               className="d-flex justify-content-center"
             >
@@ -77,9 +77,9 @@ function Explore(props) {
             </Col>)
 
           }
-          <div className="loading" ref={loader}>
+          {/* <div className="loading" ref={loader}>
            <Loading/>
-          </div>
+          </div> */}
         </Row>
       </section>
     </Container>

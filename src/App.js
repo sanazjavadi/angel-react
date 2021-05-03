@@ -22,6 +22,7 @@ import Profile from './views/profile'
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./design/_main.scss";
 
+
 const App = () => {
   return (
 

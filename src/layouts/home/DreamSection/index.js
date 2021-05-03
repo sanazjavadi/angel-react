@@ -1,8 +1,8 @@
-import React, {useEffect, useState} from 'react'
+import React from 'react'
 import { useGlobalContext } from '../../../state/context'
-import { Swiper, SwiperSlide } from 'swiper/react';
-import SwiperCore, { Autoplay } from 'swiper';
-import useWindowSize from '../../../service/hooks/useWindowSize'
+import Slider from "react-slick";
+
+
 import { Link } from 'react-router-dom'
 
 //components
@@ -10,29 +10,87 @@ import ProductCart from '../../../components/Product'
 
 //styles
 import Styles from './styles/DreamSection.module.scss'
-import { Container, Row } from 'react-bootstrap'
-import 'swiper/swiper.scss';
+import { Row } from 'react-bootstrap'
+
 
 
 function DreamSection(props) {
-  const size = useWindowSize();
+  var settings = {
+    dots: true,
+    infinite: true,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: true,
+    speed: 5000,
+    autoplaySpeed: 5000,
+    cssEase: "linear"
+,
+initialSlide: 0,
+    responsive: [
+      {
+        breakpoint: 1202,
+        settings: {
+          slidesToShow:2.5,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 992,
+        settings: {
+          slidesToShow:2,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 800,
+        settings: {
+          slidesToShow:1.7,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 674,
+        settings: {
+          slidesToShow: 1.5,
+          slidesToScroll: 1,
+          initialSlide: 2
+        }
+      },
+      {
+        breakpoint: 572,
+        settings: {
+          slidesToShow: 1.2,
+          slidesToScroll: 1
+        }
+      },
+      {
+        breakpoint: 472,
+        settings: {
+          slidesToShow: 1.1,
+          slidesToScroll: 1
+        },
+        
+      },
+      {
+        breakpoint: 430,
+        settings: {
+          slidesToShow: 0.8,
+          slidesToScroll: 1
+        },
+        
+      }
+    ]
+  };
   const { dreams } = useGlobalContext()
-  SwiperCore.use([Autoplay]);
-  const [priview, setpriview] = useState(3)
-  useEffect(()=> silderPriview (), [priview] )
-  const silderPriview = ()=> {
-    if(size> 800) {
-     setpriview(  prevState => 3)
-    }
-    else if(size>600 && size < 800) {
-      setpriview( prevState => 2)
-    }
-    else if(size <600) {
-      setpriview(  prevState => 1)
-    }
-  }
-  console.log(priview)
-console.log(size)
+
+ 
+
   return (
     <section className={Styles['sec-dream']}>
       <Row className="justify-content-center">
@@ -43,75 +101,22 @@ console.log(size)
         </div>
       </Row>
 
-      <Container fluid className="mt-5">
-        <Row className="justify-content-center">
-          <Swiper
-            autoplay={{
-              delay: 0,
-              disableOnInteraction: true,
-              stopOnLastSlide: false,
-              waitForTransition: true,
-
-            }}
-            data-swiper-autoplay="5000"
-            spaceBetween={10}
-            slidesPerView={priview}
-            style={{ marginRight: '30px', transitionTimingFunction: 'lineaer', transitionDelay: '0', transitionDuration: '5000ms' }}
-
-          >
-            {
-              dreams.map(product =>
-                <SwiperSlide style={{ transitionTimingFunction: 'lineaer', transitionDelay: '0', transitionDuration: '5000ms' }}>
-
-                  <ProductCart {...product} key={product.id}>
-                    {product.dream}
-                  </ProductCart>
-
-                </SwiperSlide>
+          <Slider  {...settings}
+      >
+        {
+          dreams.length> 0 && dreams.map((product)=> <ProductCart {...product}>
+          {product.dream}
+        </ProductCart> )
+        }
+    
+          </Slider>
+     
+          
 
 
-              )
-            }
-      ...
-    </Swiper>
+     
 
-
-        </Row>
-      </Container>
-      <Container fluid className="mt-5">
-        <Row className="justify-content-center">
-          <Swiper
-            data-swiper-autoplay="5000"
-            autoplay={{
-              delay: 0,
-              disableOnInteraction: true,
-              reverseDirection: true,
-              stopOnLastSlide: false,
-              waitForTransition: true
-            }}
-            spaceBetween={10}
-            s slidesPerView={priview}
-            style={{ marginRight: '30px' }}
-
-          >
-            {
-              dreams.map(product =>
-                <SwiperSlide >
-
-                  <ProductCart {...product} key={product.id}>
-                    {product.dream}
-                  </ProductCart>
-
-                </SwiperSlide>
-              )
-            }
-      ...
-    </Swiper>
-
-
-        </Row>
-      </Container>
-      <div className={`text-center w-100 mt-4 ${Styles.more}`}>
+      <div className={`text-center w-100 mt-5 ${Styles.more}`}>
         <Link to="/explore">موارد بیشتر</Link>
       </div>
 

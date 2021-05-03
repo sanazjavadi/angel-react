@@ -1,7 +1,7 @@
 import React, { createContext, useContext, useReducer } from 'react';
 import reducer from './reducer'
-import axios from 'axios'
 import { instance, USER_TOKEN } from '../service/api'
+import { Dreams } from '../constans/data' 
 import {
     FETCH_DREAMS_REQUEST,
     FETCH_DREAMS_REGECTE,
@@ -17,7 +17,7 @@ import {
     from '../constans/actionTypes';
 
 const initialState = {
-    dreams: [],
+    dreams: Dreams,
     loading: false,
     user:USER_TOKEN
 }
@@ -27,12 +27,13 @@ const AppContext = createContext(initialState)
 const ProviderContext = ({ children }) => {
 
     const [state, dispatch] = useReducer(reducer, initialState);
-    const fetchDreams = ({ page = 0, size = 9 }) => {
+    const fetchDreams = () => {
         dispatch({ type: FETCH_DREAMS_REQUEST })
 
-        axios.get(`https://api.instantwebtools.net/v1/passenger?page=${page}&size=${size}`).then(res => {
+        instance.get(`/v1/dream`).then(res => {
 
             dispatch({ type: FETCH_DREAMS_SUCCESS, dreams: res.data.data })
+            console.log(res.data.data)
         }).catch(err => {
             dispatch({ type: FETCH_DREAMS_REGECTE })
             console.log(err || err.response)
