@@ -6,11 +6,10 @@ import { ProviderContext } from './state/context';
 
 
 ReactDOM.render(
-  <React.StrictMode>
     <ProviderContext>
     <App />
     </ProviderContext>
-  </React.StrictMode>,
+,
   document.getElementById('root')
 );
 

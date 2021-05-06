@@ -35,7 +35,7 @@ function Welcome(props) {
               <div className="row after">
                 <div className="col">
              
-                  <BaseButton theme="darkbtn"  handleClick={()=> history.push('/your-support')}>
+                  <BaseButton theme="darkbtn"  handleclick={()=> history.push('/your-support')}>
                     اطلاعات بیشتر
                   </BaseButton>
                  
@@ -58,7 +58,7 @@ function Welcome(props) {
               </p>
               <div className="row">
                 <div className="col">
-                  <BaseButton theme="darkbtn" handleClick={()=> history.push('/your-support')}>
+                  <BaseButton theme="darkbtn" handleclick={()=> history.push('/your-support')}>
                     اطلاعات بیشتر
                   </BaseButton>
                 </div>

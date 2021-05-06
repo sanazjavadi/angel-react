@@ -57,7 +57,7 @@ function Footer(props) {
                       </li>
                     </ul>
                     <div className="mt-3">
-                      <Button theme="outlinebtn" handleClick={()=> history.push('/contact')}>
+                      <Button theme="outlinebtn" handleclick={()=> history.push('/contact')}>
                         تماس با ما
                       </Button>
                     </div>

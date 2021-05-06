@@ -46,7 +46,7 @@ function DreamCart(props) {
             <Link to="/"> آرزوی {name} کوچولو</Link>
           </h4>
         </div>
-   <Button theme="minimalBtn" handleClick={openPayModal} size="sm">
+   <Button theme="minimalBtn" handleclick={openPayModal} size="sm">
      حمایت میکنم
    </Button>
        

@@ -12,13 +12,13 @@ import Styles from './styles/Explore.module.scss'
 import {Container, Row, Col} from 'react-bootstrap'
 
 //assets
-import Loading from '../../svg/Loading'
+// import Loading from '../../svg/Loading'
 
 
 function Explore(props) {
 
-  const { dreams, fetchDreams } = useGlobalContext();
-  const [dreamLists, setDreamLists] = useState([])
+  const { dreams } = useGlobalContext();
+  // const [dreamLists, setDreamLists] = useState([])
   const [size, setSize] = useState(9)
   const [page, setPage] = useState(0)
   // add loader refrence 

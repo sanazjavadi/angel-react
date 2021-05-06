@@ -4,13 +4,14 @@ import React from "react";
 import Styles from "./Styles/Button.module.scss";
 
 function BaseButton(props) {
-  const { children, size, theme, handleClick, type, disabled } = props;
+  const { children, size, theme, handleclick, type, disabled } = props;
   return (
     <button
+    tabIndex={-1}
       {...props}
       disabled={disabled}
       type={type}
-      onClick={handleClick}
+      onClick={handleclick}
       className={`${Styles[`btn-${size}`]} ${Styles[`${theme}`]}`}
     >
       {children}

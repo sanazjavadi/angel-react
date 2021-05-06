@@ -35,12 +35,12 @@ function Banner(props) {
         <div className="row justify-content-center">
           <div className="col-lg-10 col-12 d-flex justify-content-center flex-wrap">
             <div className="mt-3 mr-lg-3 mr-md-3 mr-sm-3 ml-1">
-              <BaseButton theme="outlinebtn" handleClick={()=> history.push('/explore')}>می خوام کمک کنم</BaseButton>
+              <BaseButton theme="outlinebtn" handleclick={()=> history.push('/explore')}>می خوام کمک کنم</BaseButton>
             </div>
 
             <div className="mt-3 ml-lg-3 ml-md-3 ml-sm-3 mr-1">
               <BaseButton
-             handleClick={() => setStatus(true)}
+             handleclick={() => setStatus(true)}
               >
                 ورود
               </BaseButton>
@@ -49,7 +49,7 @@ function Banner(props) {
         </div>
       </div>
 <Modal status={status} changeStatus={() => setStatus(false)}>
-<Auth />
+<Auth changeStatus={() => setStatus(false)}/>
 </Modal>
 
     </section>

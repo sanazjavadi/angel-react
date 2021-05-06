@@ -25,7 +25,7 @@ function Index({ status, changeStatus }) {
   }
   return (
  
-      <Comp changeHandler={changePage} />
+      <Comp changeHandler={changePage} changeStatus={()=> changeStatus()}/>
    
   );
 } 

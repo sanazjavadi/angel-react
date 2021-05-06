@@ -104,7 +104,7 @@ initialSlide: 0,
           <Slider  {...settings}
       >
         {
-          dreams.length> 0 && dreams.map((product)=> <ProductCart {...product}>
+          dreams.length> 0 && dreams.map((product)=> <ProductCart {...product} key={product.id}>
           {product.dream}
         </ProductCart> )
         }

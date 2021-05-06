@@ -17,7 +17,7 @@ function Help(props) {
           <Row className="align-items-stretch">
             <Col xs={12} className="d-flex justify-content-center">
               <div className={Styles.questionImg}>
-              <img srcset="https://opencollective.com/static/images/home/weareopen-illustration-md.png" className="img-fluid" alt="" />
+              <img srcSet="https://opencollective.com/static/images/home/weareopen-illustration-md.png" className="img-fluid" alt="" />
               </div>
     
   
@@ -30,14 +30,14 @@ function Help(props) {
             <Col lg={6} md={6} xs={12} sm={6}
               className="d-flex justify-content-lg-end justify-content-center mb-3"
             >
-              <BaseButton  handleClick={()=> history.push('/contact')}>
+              <BaseButton  handleclick={()=> history.push('/contact')}>
                 تماس با ما
               </BaseButton>
             </Col>
             <Col lg={6} xs={12} md={6} sm={6}
               className="d-flex justify-content-lg-start justify-content-center mb-3"
             >
-              <BaseButton theme="lightbtn" handleClick={()=> history.push('/contact')}> سوال های متداول </BaseButton>
+              <BaseButton theme="lightbtn" handleclick={()=> history.push('/contact')}> سوال های متداول </BaseButton>
             </Col>
           </Row>
         </Container>

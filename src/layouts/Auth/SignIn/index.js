@@ -9,7 +9,7 @@ import Button from "../../../components/Button";
 import Styles from "./styles/Signin.module.scss";
 import {Container, Row, Col} from 'react-bootstrap'
 
-function Index({ changeHandler }) {
+function Index({ changeHandler, changeStatus }) {
   const { logIn } = useGlobalContext()
   return (
     <section className="mt-5 pt-5 pb-5">
@@ -39,6 +39,7 @@ function Index({ changeHandler }) {
                     logIn(values)
                     setSubmitting(false);
                   }, 400);
+                  changeStatus()
                 }}
               >
                 {({

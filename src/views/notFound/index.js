@@ -27,7 +27,7 @@ function Notfound(props) {
             <div className={Styles.text}>متاسفانه صفحه مورد نظر یافت نشد</div>
          
          <div className="mt-5">
-         <Button handleClick={() => history.push('/')}>بازگشت به صفحه قبلی</Button>
+         <Button handleclick={() => history.push('/')}>بازگشت به صفحه قبلی</Button>
          </div>
            
         </div>

@@ -14,10 +14,10 @@ import FacebookSvg from '../../../svg/Facebook'
 import YahooSvg from '../../../svg/Yahoo'
 import GmailSvg from '../../../svg/Google'
 
-function Index({ changeHandler }) {
+function Index({ changeHandler, changeStatus }) {
   const { signUp } = useGlobalContext()
   return (
-    <section className="mt-5 ">
+    <section className="mt-5 ">  
       <div className="container">
         <div className="row justify-content-center">
           <div className="col-lg-5 col-md-8 col-sm-10 col-12">
@@ -45,10 +45,10 @@ function Index({ changeHandler }) {
                     setSubmitting(false);
                 
                   }, 400);
-          
+                  changeStatus()
                 }}
               >
-                {({
+                {({ 
                   values,
                   errors,
                   touched,
